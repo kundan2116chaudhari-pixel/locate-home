@@ -2425,6 +2425,169 @@ button {
   color: #FFFFFF;
 }
 
+/* --------------------------------------------------------------------------
+   Sunteck Addendum: Two-Tier Connectivity Styles
+   -------------------------------------------------------------------------- */
+.two-tier-connectivity-wrap {
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+  margin-top: 2rem;
+}
+
+.connectivity-tier-block {
+  background: rgba(255, 255, 255, 0.03);
+  border: 1px solid var(--border-gold);
+  border-radius: 12px;
+  padding: 2rem;
+  backdrop-filter: blur(10px);
+}
+
+.tier-header {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.75rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-light);
+}
+
+.tier-icon-circle {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  background: var(--accent-gold-bg);
+  border: 1px solid var(--accent-gold);
+  color: var(--accent-gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.upcoming-icon-circle {
+  background: rgba(245, 217, 127, 0.15);
+  border-color: #F5D97F;
+  color: #F5D97F;
+}
+
+.tier-title {
+  font-size: 1.6rem;
+  font-weight: 500;
+  color: #FFFFFF;
+}
+
+.connectivity-items-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.connectivity-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  padding: 1.25rem;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  border-radius: 8px;
+  transition: transform var(--transition-fast), border-color var(--transition-fast);
+}
+
+.connectivity-item:hover {
+  transform: translateY(-2px);
+  border-color: var(--border-gold);
+}
+
+.badge-placeholder {
+  color: #F5D97F !important;
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+}
+
+/* --------------------------------------------------------------------------
+   Sunteck Addendum: Testimonials Video Wall
+   -------------------------------------------------------------------------- */
+.testimonials-section {
+  background-color: var(--bg-secondary);
+  border-top: 1px solid var(--border-gold);
+  border-bottom: 1px solid var(--border-gold);
+}
+
+.testimonials-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.testimonial-card {
+  height: 480px;
+  width: 100%;
+}
+
+/* --------------------------------------------------------------------------
+   Sunteck Addendum: RERA QR Code Pairings & Country Code Dropdown
+   -------------------------------------------------------------------------- */
+.rera-qr-pairing-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  margin-top: 0.75rem;
+}
+
+.rera-qr-item {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(212, 175, 55, 0.3);
+  border-radius: 8px;
+}
+
+.qr-code-box {
+  width: 48px;
+  height: 48px;
+  background: #FFFFFF;
+  color: #000000;
+  border-radius: 4px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 4px;
+}
+
+.rera-details {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.rera-phase-label {
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  color: var(--accent-gold-light);
+}
+
+.rera-num-code {
+  font-size: 0.95rem;
+  color: #FFFFFF;
+  letter-spacing: 0.05em;
+}
+
+.country-code-select {
+  width: 160px;
+  padding: 0.9rem 0.6rem;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  font-family: var(--font-sans);
+  font-size: 0.85rem;
+  color: #FFFFFF;
+  cursor: pointer;
+}
+
 .consent-check-group {
   margin-top: 0.5rem;
 }
