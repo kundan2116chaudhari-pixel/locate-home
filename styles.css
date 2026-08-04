@@ -1,28 +1,28 @@
 /* --------------------------------------------------------------------------
-   1. Design Tokens & CSS Variables (Ultra-Luxury Curated Palette)
+   1. Design Tokens & CSS Variables (Curated Framer Dark Luxury Palette)
    -------------------------------------------------------------------------- */
 :root {
-  /* Curated Luxury Palette */
-  --bg-primary: #FAF8F5;       /* Warm Alabaster Cream */
-  --bg-secondary: #F3EFEA;     /* Soft Silk Warm Neutral */
-  --bg-card: #FFFFFF;
-  --bg-dark: #0E0F12;          /* Deep Obsidian Onyx */
-  --bg-dark-card: #16181D;
+  /* Framer Dark Luxury Palette */
+  --bg-primary: #0B0C0E;       /* Deep Midnight Obsidian */
+  --bg-secondary: #121418;     /* Muted Velvet Charcoal */
+  --bg-card: #17191F;          /* Frosted Dark Graphite */
+  --bg-dark: #070809;          /* Near-Black Onyx */
+  --bg-dark-card: #13151B;
   
-  --text-dark: #16171A;         /* Deep Obsidian Charcoal */
-  --text-muted: #787D85;
+  --text-dark: #F4F5F8;         /* Crisp Warm Silk White */
+  --text-muted: #9BA1B0;        /* Platinum Silver Grey */
   --text-light: #FAF9F6;
   
-  --border-light: rgba(22, 23, 26, 0.08);
-  --border-dark: rgba(255, 255, 255, 0.12);
-  --border-gold: rgba(197, 160, 89, 0.35);
+  --border-light: rgba(255, 255, 255, 0.08);
+  --border-dark: rgba(255, 255, 255, 0.15);
+  --border-gold: rgba(212, 175, 55, 0.25);
   
   /* Imperial Gold Accents */
-  --accent-gold: #C5A059;
-  --accent-gold-light: #D4AF37;
-  --accent-gold-bright: #E5C158;
-  --accent-gold-bg: rgba(197, 160, 89, 0.12);
-  --accent-black: #0E0F12;
+  --accent-gold: #D4AF37;
+  --accent-gold-light: #E5C158;
+  --accent-gold-bright: #F5D77F;
+  --accent-gold-bg: rgba(212, 175, 55, 0.12);
+  --accent-black: #0B0C0E;
   
   /* Typography */
   --font-serif: 'Cormorant Garamond', Georgia, serif;
@@ -129,7 +129,7 @@ button {
   font-weight: 500;
   line-height: 1.15;
   letter-spacing: -0.01em;
-  color: var(--text-dark);
+  color: #FFFFFF;
   margin-top: 0.5rem;
 }
 
@@ -233,7 +233,7 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   4. Sticky White Header
+   4. Sticky White Header (Framer Dark Obsidian Glass)
    -------------------------------------------------------------------------- */
 .site-header {
   position: fixed;
@@ -241,16 +241,16 @@ button {
   left: 0;
   width: 100%;
   height: var(--header-height);
-  background-color: rgba(250, 248, 245, 0.94);
-  backdrop-filter: blur(12px);
+  background-color: rgba(11, 12, 14, 0.88);
+  backdrop-filter: blur(16px);
   border-bottom: 1px solid var(--border-light);
   z-index: 1000;
   transition: box-shadow var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast);
 }
 
 .site-header.is-scrolled {
-  background-color: rgba(255, 255, 255, 0.96);
-  box-shadow: 0 10px 30px rgba(14, 15, 18, 0.06);
+  background-color: rgba(11, 12, 14, 0.96);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
   border-bottom-color: var(--border-gold);
 }
 
@@ -275,7 +275,7 @@ button {
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
-  color: var(--text-dark);
+  color: #FFFFFF;
   line-height: 1.1;
 }
 
@@ -308,11 +308,15 @@ button {
 .nav-link {
   font-size: 0.9rem;
   font-weight: 500;
-  color: var(--text-dark);
+  color: rgba(255, 255, 255, 0.82);
   letter-spacing: 0.02em;
   position: relative;
   padding: 0.25rem 0;
   transition: color var(--transition-fast);
+}
+
+.nav-link:hover {
+  color: #FFFFFF;
 }
 
 .nav-link::after {
@@ -332,13 +336,13 @@ button {
 
 .nav-link.nav-highlight {
   font-weight: 700;
-  color: #B89343;
+  color: #F1D377;
   padding: 0.45rem 1.1rem;
-  background: linear-gradient(135deg, rgba(197, 160, 89, 0.12), rgba(212, 175, 55, 0.22));
+  background: rgba(212, 175, 55, 0.15);
   border-radius: 20px;
-  border: 1px solid rgba(197, 160, 89, 0.4);
+  border: 1px solid rgba(212, 175, 55, 0.4);
   transition: all var(--transition-fast);
-  box-shadow: 0 4px 15px rgba(197, 160, 89, 0.12);
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.15);
 }
 
 .nav-link.nav-highlight::after {
@@ -349,7 +353,7 @@ button {
   background: var(--accent-gold-light);
   color: #0E0F12;
   border-color: var(--accent-gold-light);
-  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.4);
 }
 
 .header-right {
@@ -374,7 +378,7 @@ button {
 .header-phone {
   font-size: 0.85rem;
   font-weight: 600;
-  color: var(--text-dark);
+  color: #FFFFFF;
   letter-spacing: 0.02em;
 }
 
@@ -750,17 +754,25 @@ button {
 
 .about-body-text {
   font-size: 1rem;
-  color: var(--text-dark);
+  color: rgba(255, 255, 255, 0.88);
   line-height: 1.7;
 }
 
-/* Stat Counters Grid */
+.btn-text-arrow {
+  color: #FFFFFF;
+  border-bottom: 1px solid var(--accent-gold-light);
+}
+
+/* Stat Counters Grid (Frosted Dark Glass Card) */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
   gap: 2rem;
-  padding-top: 1.5rem;
-  border-top: 1px solid var(--border-light);
+  padding: 2.5rem 2rem;
+  background: var(--bg-card);
+  border: 1px solid var(--border-gold);
+  border-radius: 12px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.3);
 }
 
 .stat-card {
@@ -770,15 +782,15 @@ button {
 
 .stat-number-wrap {
   font-family: var(--font-serif);
-  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  font-size: clamp(2.75rem, 4.5vw, 3.75rem);
   font-weight: 500;
   line-height: 1;
-  color: var(--text-dark);
+  color: #FFFFFF;
 }
 
 .stat-plus, .stat-symbol {
-  font-size: 0.7em;
-  color: var(--accent-gold);
+  font-size: 0.75em;
+  color: var(--accent-gold-light);
 }
 
 .stat-label {
@@ -789,7 +801,7 @@ button {
   line-height: 1.4;
 }
 
-/* Overlapping Image Layout (Gerax Signature) */
+/* Overlapping Image Layout */
 .about-imagery-block {
   position: relative;
   width: 100%;
@@ -799,7 +811,7 @@ button {
 .about-img-main {
   width: 82%;
   height: clamp(350px, 50vw, 550px);
-  border-radius: 4px;
+  border-radius: 8px;
   overflow: hidden;
 }
 
@@ -815,10 +827,11 @@ button {
   right: 0;
   width: 42%;
   height: clamp(220px, 32vw, 360px);
-  border-radius: 4px;
+  border-radius: 8px;
   overflow: hidden;
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.18);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.4);
   border: 4px solid var(--bg-primary);
+  outline: 1px solid var(--border-gold);
 }
 
 .about-img-offset img {
@@ -831,21 +844,22 @@ button {
   position: absolute;
   bottom: 1rem;
   left: 1rem;
-  background: rgba(10, 11, 12, 0.85);
-  backdrop-filter: blur(6px);
-  padding: 0.4rem 0.8rem;
+  background: rgba(14, 15, 18, 0.88);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--border-gold);
+  padding: 0.45rem 0.9rem;
   border-radius: 20px;
 }
 
 /* --------------------------------------------------------------------------
-   7. Logo Marquee Strip (Pure CSS Keyframe Infinite Loop)
+   7. Logo Marquee Strip (Dark Velvet Framer Theme)
    -------------------------------------------------------------------------- */
 .marquee-section {
   padding: 4.5rem 0;
   background-color: var(--bg-secondary);
   overflow: hidden;
-  border-top: 1px solid var(--border-light);
-  border-bottom: 1px solid var(--border-light);
+  border-top: 1px solid var(--border-gold);
+  border-bottom: 1px solid var(--border-gold);
 }
 
 .marquee-header {
@@ -907,18 +921,17 @@ button {
   max-width: 240px;
   width: auto;
   object-fit: contain;
-  mix-blend-mode: multiply;
-  filter: grayscale(100%) contrast(130%) opacity(0.85);
+  filter: brightness(0) invert(1) opacity(0.75);
   transition: filter var(--transition-fast), transform var(--transition-fast);
 }
 
 .logo-item:hover img {
-  filter: grayscale(0%) contrast(100%) opacity(1);
+  filter: brightness(1) opacity(1);
   transform: scale(1.12);
 }
 
 /* --------------------------------------------------------------------------
-   8. Location-Wise Videos Rail (9:16 Horizontal Snap & Drag)
+   8. Location-Wise Videos Rail (Dark Framer Controls)
    -------------------------------------------------------------------------- */
 .locations-section {
   background-color: var(--bg-primary);
@@ -944,9 +957,9 @@ button {
   width: 44px;
   height: 44px;
   border-radius: 50%;
-  border: 1px solid var(--border-light);
-  background: var(--bg-primary);
-  color: var(--text-dark);
+  border: 1px solid var(--border-gold);
+  background: var(--bg-card);
+  color: #FFFFFF;
   font-size: 1.2rem;
   display: flex;
   align-items: center;
@@ -956,10 +969,10 @@ button {
 }
 
 .rail-arrow-btn:hover {
-  background: var(--text-dark);
-  color: var(--bg-primary);
-  border-color: var(--text-dark);
-  transform: scale(1.05);
+  background: var(--accent-gold-light);
+  color: #0E0F12;
+  border-color: var(--accent-gold-light);
+  transform: scale(1.08);
 }
 
 .locations-rail-outer {
