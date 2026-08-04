@@ -1714,8 +1714,42 @@ button {
   backdrop-filter: blur(10px);
 }
 
+.sunteck-status-badge.live-status-badge {
+  background: linear-gradient(135deg, rgba(212, 175, 55, 0.28), rgba(184, 134, 11, 0.4));
+  border-color: #F5D97F;
+  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
+}
+
+.sunteck-status-badge.badge-secondary {
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: rgba(255, 255, 255, 0.9);
+}
+
 .sunteck-status-badge svg {
   color: #FFD700;
+  animation: statusPulse 2s infinite ease-in-out;
+}
+
+@keyframes statusPulse {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50% { opacity: 0.5; transform: scale(0.85); }
+}
+
+.btn-brochure-direct {
+  background: transparent !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(241, 211, 119, 0.5) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(8px);
+}
+
+.btn-brochure-direct:hover {
+  background: rgba(241, 211, 119, 0.15) !important;
+  border-color: #F1D377 !important;
+  color: #F1D377 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.3) !important;
 }
 
 .hero-developer-tag {
