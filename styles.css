@@ -1,23 +1,28 @@
-/* ==========================================================================
-   LOCATE HOMES — LUXURY REAL ESTATE COMPLETE STYLESHEET
-   Design Language: Editorial Luxury, Serif Display, Muted Palette
-   ========================================================================== */
-
 /* --------------------------------------------------------------------------
-   1. Design Tokens & CSS Variables
+   1. Design Tokens & CSS Variables (Ultra-Luxury Curated Palette)
    -------------------------------------------------------------------------- */
 :root {
-  /* Color Palette */
-  --bg-primary: #FFFFFF;
-  --bg-secondary: #F8F7F4;
-  --bg-dark: #0A0B0C;
-  --text-dark: #111213;
-  --text-muted: #6B7280;
-  --text-light: #F9FAFB;
-  --border-light: rgba(0, 0, 0, 0.08);
+  /* Curated Luxury Palette */
+  --bg-primary: #FAF8F5;       /* Warm Alabaster Cream */
+  --bg-secondary: #F3EFEA;     /* Soft Silk Warm Neutral */
+  --bg-card: #FFFFFF;
+  --bg-dark: #0E0F12;          /* Deep Obsidian Onyx */
+  --bg-dark-card: #16181D;
+  
+  --text-dark: #16171A;         /* Deep Obsidian Charcoal */
+  --text-muted: #787D85;
+  --text-light: #FAF9F6;
+  
+  --border-light: rgba(22, 23, 26, 0.08);
   --border-dark: rgba(255, 255, 255, 0.12);
+  --border-gold: rgba(197, 160, 89, 0.35);
+  
+  /* Imperial Gold Accents */
   --accent-gold: #C5A059;
-  --accent-black: #000000;
+  --accent-gold-light: #D4AF37;
+  --accent-gold-bright: #E5C158;
+  --accent-gold-bg: rgba(197, 160, 89, 0.12);
+  --accent-black: #0E0F12;
   
   /* Typography */
   --font-serif: 'Cormorant Garamond', Georgia, serif;
@@ -89,16 +94,23 @@ button {
 }
 
 .text-gold {
-  color: var(--accent-gold) !important;
+  color: var(--accent-gold-light) !important;
+}
+
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFFFFF 0%, #F5E5C0 40%, #D4AF37 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: inline-block;
 }
 
 .micro-label {
   font-family: var(--font-sans);
-  font-size: 0.75rem;
+  font-size: 0.725rem;
   font-weight: 700;
-  letter-spacing: 0.2em;
+  letter-spacing: 0.22em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--accent-gold);
 }
 
 .section-padding {
@@ -229,15 +241,17 @@ button {
   left: 0;
   width: 100%;
   height: var(--header-height);
-  background-color: var(--bg-primary);
+  background-color: rgba(250, 248, 245, 0.94);
+  backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--border-light);
   z-index: 1000;
-  transition: box-shadow var(--transition-fast), border-color var(--transition-fast);
+  transition: box-shadow var(--transition-fast), border-color var(--transition-fast), background-color var(--transition-fast);
 }
 
 .site-header.is-scrolled {
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
-  border-bottom-color: transparent;
+  background-color: rgba(255, 255, 255, 0.96);
+  box-shadow: 0 10px 30px rgba(14, 15, 18, 0.06);
+  border-bottom-color: var(--border-gold);
 }
 
 .header-container {
@@ -257,7 +271,7 @@ button {
 
 .logo-title {
   font-family: var(--font-serif);
-  font-size: 1.5rem;
+  font-size: 1.55rem;
   font-weight: 600;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -268,10 +282,10 @@ button {
 .logo-tagline {
   font-family: var(--font-sans);
   font-size: 0.6rem;
-  font-weight: 600;
+  font-weight: 700;
   letter-spacing: 0.25em;
   text-transform: uppercase;
-  color: var(--text-muted);
+  color: var(--accent-gold);
 }
 
 .desktop-nav {
@@ -308,7 +322,7 @@ button {
   left: 0;
   width: 0%;
   height: 1.5px;
-  background-color: var(--text-dark);
+  background-color: var(--accent-gold-light);
   transition: width var(--transition-fast);
 }
 
@@ -318,12 +332,13 @@ button {
 
 .nav-link.nav-highlight {
   font-weight: 700;
-  color: var(--accent-black);
-  padding: 0.4rem 0.9rem;
-  background-color: var(--bg-secondary);
+  color: #B89343;
+  padding: 0.45rem 1.1rem;
+  background: linear-gradient(135deg, rgba(197, 160, 89, 0.12), rgba(212, 175, 55, 0.22));
   border-radius: 20px;
-  border: 1px solid rgba(0, 0, 0, 0.1);
+  border: 1px solid rgba(197, 160, 89, 0.4);
   transition: all var(--transition-fast);
+  box-shadow: 0 4px 15px rgba(197, 160, 89, 0.12);
 }
 
 .nav-link.nav-highlight::after {
@@ -331,8 +346,10 @@ button {
 }
 
 .nav-link.nav-highlight:hover {
-  background-color: var(--text-dark);
-  color: var(--bg-primary);
+  background: var(--accent-gold-light);
+  color: #0E0F12;
+  border-color: var(--accent-gold-light);
+  box-shadow: 0 6px 20px rgba(212, 175, 55, 0.35);
 }
 
 .header-right {
@@ -365,7 +382,7 @@ button {
   font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.18em;
-  color: var(--text-muted);
+  color: var(--accent-gold);
 }
 
 .mobile-toggle-btn {
@@ -444,7 +461,7 @@ button {
 
 .mobile-nav-link.highlight {
   font-weight: 700;
-  color: var(--accent-gold);
+  color: var(--accent-gold-light);
 }
 
 .mobile-menu-footer {
@@ -465,7 +482,7 @@ button {
   font-size: 0.75rem;
   font-weight: 700;
   letter-spacing: 0.15em;
-  color: var(--text-muted);
+  color: var(--accent-gold);
 }
 
 /* --------------------------------------------------------------------------
@@ -511,7 +528,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.45) 0%, rgba(0, 0, 0, 0.75) 100%);
+  background: linear-gradient(180deg, rgba(14, 15, 18, 0.45) 0%, rgba(14, 15, 18, 0.8) 100%);
   z-index: 2;
 }
 
@@ -537,12 +554,15 @@ button {
 }
 
 .hero-badge {
-  color: rgba(255, 255, 255, 0.85);
-  background: rgba(255, 255, 255, 0.1);
-  padding: 0.5rem 1rem;
+  color: #F1D377;
+  background: rgba(14, 15, 18, 0.45);
+  padding: 0.55rem 1.25rem;
   border-radius: 30px;
-  backdrop-filter: blur(8px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(12px);
+  border: 1px solid rgba(212, 175, 55, 0.35);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.25);
+  display: inline-flex;
+  align-items: center;
 }
 
 .hero-toggle-container {
@@ -595,13 +615,13 @@ button {
 }
 
 .hero-content {
-  max-width: 860px;
+  max-width: 880px;
   margin-bottom: 2rem;
 }
 
 .hero-headline {
   font-family: var(--font-serif);
-  font-size: clamp(2.5rem, 5.5vw, 4.75rem);
+  font-size: clamp(2.6rem, 5.8vw, 4.85rem);
   font-weight: 500;
   line-height: 1.08;
   letter-spacing: -0.01em;
@@ -612,8 +632,8 @@ button {
 .hero-subcopy {
   font-size: clamp(1rem, 1.8vw, 1.25rem);
   font-weight: 300;
-  color: rgba(255, 255, 255, 0.85);
-  max-width: 640px;
+  color: rgba(255, 255, 255, 0.88);
+  max-width: 660px;
   margin-bottom: 2.5rem;
   line-height: 1.6;
 }
@@ -623,21 +643,22 @@ button {
   align-items: center;
   gap: 0.75rem;
   padding: 1.1rem 2.25rem;
-  background-color: #FFFFFF;
-  color: var(--text-dark);
+  background: linear-gradient(135deg, #D4AF37 0%, #C5A059 100%);
+  color: #0E0F12;
   font-size: 0.85rem;
   font-weight: 700;
   letter-spacing: 0.12em;
   text-transform: uppercase;
   border-radius: 40px;
   transition: transform var(--transition-fast), background-color var(--transition-fast), box-shadow var(--transition-fast);
-  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.4);
 }
 
 .btn-primary:hover {
   transform: translateY(-2px);
-  background-color: var(--bg-secondary);
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3);
+  background: linear-gradient(135deg, #E5C158 0%, #D4AF37 100%);
+  box-shadow: 0 12px 35px rgba(212, 175, 55, 0.5);
 }
 
 .btn-arrow {
