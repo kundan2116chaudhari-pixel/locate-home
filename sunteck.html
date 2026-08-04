@@ -1,0 +1,763 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sunteck Naigaon — World's Future Masterpiece | Locate Homes</title>
+  <meta name="description" content="Sunteck Naigaon offers luxury 1 & 2 BHK residences across a 150-acre township with 55+ world-class amenities.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="page-sunteck">
+
+  <!-- Sticky White Header (Shared Locate Homes Component) -->
+  <header id="main-header" class="site-header">
+    <div class="header-container">
+      <!-- Left: Logo -->
+      <a href="index.html" class="brand-logo" aria-label="Locate Homes Home">
+        <span class="logo-title">LOCATE HOMES</span>
+        <span class="logo-tagline">ESTATES & RESIDENCES</span>
+      </a>
+
+      <!-- Center Nav Links -->
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="index.html#about" class="nav-link">About Us</a></li>
+          <li><a href="index.html#locations" class="nav-link">Locations</a></li>
+          <li><a href="index.html#process" class="nav-link">Services</a></li>
+          <li><a href="sunteck.html" class="nav-link nav-highlight active">Sunteck</a></li>
+          <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right: Contact info & location label -->
+      <div class="header-right">
+        <div class="header-contact-meta">
+          <a href="tel:+919876543210" class="header-phone">+91 (0) 22 4900 8888</a>
+          <span class="header-location-label">BASED IN MUMBAI, INDIA</span>
+        </div>
+        <button id="mobile-menu-toggle" class="mobile-toggle-btn" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Fullscreen Overlay Menu -->
+  <div id="mobile-menu" class="mobile-menu-overlay" aria-hidden="true">
+    <div class="mobile-menu-inner">
+      <div class="mobile-menu-header">
+        <span class="logo-title">LOCATE HOMES</span>
+        <button id="mobile-menu-close" class="mobile-close-btn" aria-label="Close menu">&times;</button>
+      </div>
+      <nav class="mobile-nav">
+        <ul class="mobile-nav-list">
+          <li><a href="index.html#about" class="mobile-nav-link">About Us</a></li>
+          <li><a href="index.html#locations" class="mobile-nav-link">Locations</a></li>
+          <li><a href="index.html#process" class="mobile-nav-link">Services</a></li>
+          <li><a href="sunteck.html" class="mobile-nav-link highlight">Sunteck</a></li>
+          <li><a href="index.html#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu-footer">
+        <span class="micro-label">LOCATE HOMES REALTY</span>
+        <a href="tel:+919876543210" class="mobile-contact-line">+91 (0) 22 4900 8888</a>
+        <a href="mailto:inquiries@locatehomes.com" class="mobile-contact-line">inquiries@locatehomes.com</a>
+        <div class="mobile-location">BASED IN MUMBAI, INDIA</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 1: Sunteck Hero Section -->
+  <section id="sunteck-hero" class="hero-section sunteck-hero-section">
+    <!-- Hero Media Background -->
+    <div class="hero-media-wrapper">
+      <video class="hero-video active" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-modern-architecture-building-under-a-clear-sky-41481-large.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay sunteck-hero-overlay"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="hero-container sunteck-hero-container">
+      <div class="hero-top-controls">
+        <span class="micro-label sunteck-status-badge">
+          <svg width="12" height="12" viewBox="0 0 24 24" fill="currentColor"><circle cx="12" cy="12" r="10"/></svg>
+          NAIGAON #1 CHOICE
+        </span>
+      </div>
+
+      <div class="hero-content sunteck-hero-content">
+        <span class="micro-label hero-developer-tag">SUNTECK REALTY TOWNSHIP</span>
+        <h1 class="hero-headline sunteck-headline">
+          Get Ready for the World's Future Masterpiece!
+        </h1>
+        <p class="hero-subcopy sunteck-subcopy">
+          Here's your chance to offer clients world-class living at unmatched prices in the largest 150-acre township of the Western Suburbs.
+        </p>
+
+        <!-- CTA Row -->
+        <div class="hero-cta-wrapper sunteck-cta-row">
+          <a href="#sunteck-enquiry" class="btn-primary btn-gold">
+            <span>Enquire Now</span>
+            <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+          <a href="#sunteck-enquiry" class="btn-secondary-outline">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+            <span>Download Brochure</span>
+          </a>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <a href="#highlights" class="hero-scroll-indicator" aria-label="Scroll to Highlights">
+        <span class="scroll-text">DISCOVER</span>
+        <div class="scroll-line-wrap">
+          <div class="scroll-line"></div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- SECTION 2: Project Highlights & Stat Band -->
+  <section id="highlights" class="section-padding sunteck-highlights-section">
+    <div class="site-container">
+      <div class="section-header-block fade-up">
+        <span class="micro-label text-gold">PROJECT HIGHLIGHTS</span>
+        <h2 class="section-headline serif">Come Home to Infinite Living</h2>
+      </div>
+
+      <!-- Animated Stat Band Grid -->
+      <div class="sunteck-stats-grid fade-up">
+        <div class="sunteck-stat-card">
+          <div class="stat-number-wrap">
+            <span class="stat-number" data-target="150">0</span><span class="stat-unit">Acres</span>
+          </div>
+          <span class="stat-label">Township Size — <em>Largest in Western Suburbs</em></span>
+        </div>
+
+        <div class="sunteck-stat-card">
+          <div class="stat-number-wrap">
+            <span class="stat-number" data-target="85">0</span><span class="stat-unit">%</span>
+          </div>
+          <span class="stat-label">Open Space — <em>More greenery & breathing room</em></span>
+        </div>
+
+        <div class="sunteck-stat-card">
+          <div class="stat-number-wrap">
+            <span class="stat-custom">Luxury</span>
+          </div>
+          <span class="stat-label">Residences — <em>Premium views & finishes</em></span>
+        </div>
+
+        <div class="sunteck-stat-card">
+          <div class="stat-number-wrap">
+            <span class="stat-number" data-target="55">0</span><span class="stat-unit">+</span>
+          </div>
+          <span class="stat-label">World-Class Amenities</span>
+        </div>
+      </div>
+
+      <!-- Supporting Editorial Copy -->
+      <div class="sunteck-intro-copy fade-up">
+        <p class="intro-paragraph">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sunteck Naigaon represents a landmark 150-acre integrated township designed for grand living. Featuring magnificent high-rise towers, endless manicured lawns, and unmatched suburban connectivity, every residence is built for high-capital appreciation and serene family life.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Amenities Grid (55+) -->
+  <section id="sunteck-amenities" class="section-padding sunteck-amenities-section">
+    <div class="site-container">
+      <div class="section-header-flex fade-up">
+        <div>
+          <span class="micro-label text-gold">AMENITIES</span>
+          <h2 class="section-headline serif">Indulge in World-Class Living</h2>
+        </div>
+        <span class="sunteck-badge-tag">55+ LUXURY FEATURES</span>
+      </div>
+
+      <!-- Amenities Photo Cards Grid -->
+      <div class="amenities-grid">
+        <div class="amenity-card fade-up">
+          <div class="amenity-img-wrap">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=600&q=80" alt="Grand Clubhouse" loading="lazy">
+          </div>
+          <div class="amenity-info">
+            <span class="amenity-num">01</span>
+            <h3 class="amenity-title serif">Grand Clubhouse</h3>
+          </div>
+        </div>
+
+        <div class="amenity-card fade-up">
+          <div class="amenity-img-wrap">
+            <img src="https://images.unsplash.com/photo-1576013551627-0cc20b96c2a7?auto=format&fit=crop&w=600&q=80" alt="Swimming Pool" loading="lazy">
+          </div>
+          <div class="amenity-info">
+            <span class="amenity-num">02</span>
+            <h3 class="amenity-title serif">Infinite Swimming Pool</h3>
+          </div>
+        </div>
+
+        <div class="amenity-card fade-up">
+          <div class="amenity-img-wrap">
+            <img src="https://images.unsplash.com/photo-1626224583764-f87db24ac4ea?auto=format&fit=crop&w=600&q=80" alt="Badminton Court" loading="lazy">
+          </div>
+          <div class="amenity-info">
+            <span class="amenity-num">03</span>
+            <h3 class="amenity-title serif">Badminton Court</h3>
+          </div>
+        </div>
+
+        <div class="amenity-card fade-up">
+          <div class="amenity-img-wrap">
+            <img src="https://images.unsplash.com/photo-1540747913346-19e32dc3e97e?auto=format&fit=crop&w=600&q=80" alt="Cricket Pitch" loading="lazy">
+          </div>
+          <div class="amenity-info">
+            <span class="amenity-num">04</span>
+            <h3 class="amenity-title serif">Cricket Pitch</h3>
+          </div>
+        </div>
+
+        <div class="amenity-card fade-up">
+          <div class="amenity-img-wrap">
+            <img src="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=600&q=80" alt="Gymnasium" loading="lazy">
+          </div>
+          <div class="amenity-info">
+            <span class="amenity-num">05</span>
+            <h3 class="amenity-title serif">Fitness Gym & Studio</h3>
+          </div>
+        </div>
+
+        <div class="amenity-card fade-up">
+          <div class="amenity-img-wrap">
+            <img src="https://images.unsplash.com/photo-1611195974226-a6a9be9dd763?auto=format&fit=crop&w=600&q=80" alt="Indoor Games" loading="lazy">
+          </div>
+          <div class="amenity-info">
+            <span class="amenity-num">06</span>
+            <h3 class="amenity-title serif">Indoor Games Arena</h3>
+          </div>
+        </div>
+
+        <div class="amenity-card fade-up">
+          <div class="amenity-img-wrap">
+            <img src="https://images.unsplash.com/photo-1519167758481-83f550bb49b3?auto=format&fit=crop&w=600&q=80" alt="Banquet Hall" loading="lazy">
+          </div>
+          <div class="amenity-info">
+            <span class="amenity-num">07</span>
+            <h3 class="amenity-title serif">Luxury Banquet Hall</h3>
+          </div>
+        </div>
+
+        <div class="amenity-card fade-up">
+          <div class="amenity-img-wrap">
+            <img src="https://images.unsplash.com/photo-1489599849927-2ee91cede3ba?auto=format&fit=crop&w=600&q=80" alt="Movie Theatre" loading="lazy">
+          </div>
+          <div class="amenity-info">
+            <span class="amenity-num">08</span>
+            <h3 class="amenity-title serif">Private Movie Theatre</h3>
+          </div>
+        </div>
+
+        <div class="amenity-card fade-up">
+          <div class="amenity-img-wrap">
+            <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=600&q=80" alt="Landscaped Gardens" loading="lazy">
+          </div>
+          <div class="amenity-info">
+            <span class="amenity-num">09</span>
+            <h3 class="amenity-title serif">Landscaped Gardens</h3>
+          </div>
+        </div>
+
+        <div class="amenity-card fade-up">
+          <div class="amenity-img-wrap">
+            <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=600&q=80" alt="Retail Boulevard" loading="lazy">
+          </div>
+          <div class="amenity-info">
+            <span class="amenity-num">10</span>
+            <h3 class="amenity-title serif">High-Street Retail Boulevard</h3>
+          </div>
+        </div>
+      </div>
+
+      <!-- Closing Callout Banner -->
+      <div class="amenities-callout-banner fade-up">
+        <span class="callout-tag micro-label">UNMATCHED TOWNSHIP EXPERIENCE</span>
+        <h3 class="callout-text serif">&ldquo;JUST NAME IT, WE HAVE IT&rdquo;</h3>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: Connectivity Section -->
+  <section id="connectivity" class="section-padding connectivity-section">
+    <div class="site-container">
+      <div class="section-header-block fade-up">
+        <span class="micro-label text-gold">CONNECTIVITY</span>
+        <h2 class="section-headline serif">Unmatched Reach & Suburban Proximity</h2>
+      </div>
+
+      <div class="connectivity-grid">
+        <!-- Left: Distance Icon List -->
+        <div class="connectivity-list-col fade-up">
+          <div class="connectivity-item">
+            <div class="connect-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 15s1-1 4-1 5 2 8 2 4-1 4-1V3s-1 1-4 1-5-2-8-2-4 1-4 1z"/><line x1="4" y1="22" x2="4" y2="15"/></svg>
+            </div>
+            <div class="connect-info">
+              <span class="connect-dist">1.5 KM</span>
+              <h3 class="connect-title">Naigaon Railway Station</h3>
+              <p class="connect-sub">Direct access via East-West Flyover</p>
+            </div>
+          </div>
+
+          <div class="connectivity-item">
+            <div class="connect-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M9 3v18"/><path d="M15 3v18"/><path d="M3 9h18"/><path d="M3 15h18"/></svg>
+            </div>
+            <div class="connect-info">
+              <span class="connect-dist">3.5 KM</span>
+              <h3 class="connect-title">Vasai Railway Station</h3>
+              <p class="connect-sub">Major junction for outstation & local lines</p>
+            </div>
+          </div>
+
+          <div class="connectivity-item">
+            <div class="connect-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"/></svg>
+            </div>
+            <div class="connect-info">
+              <span class="connect-dist">4.0 KM</span>
+              <h3 class="connect-title">Western Express Highway (WEH)</h3>
+              <p class="connect-sub">Smooth artery connecting to BKC & Airport</p>
+            </div>
+          </div>
+
+          <div class="connectivity-item">
+            <div class="connect-icon-box">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s-8-4.5-8-11.8A8 8 0 0 1 12 2a8 8 0 0 1 8 8.2c0 7.3-8 11.8-8 11.8z"/><circle cx="12" cy="10" r="3"/></svg>
+            </div>
+            <div class="connect-info">
+              <span class="connect-dist">500 M</span>
+              <h3 class="connect-title">Juhu Chandra Station</h3>
+              <p class="connect-sub">Upcoming Metro Line & Station</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Map Placeholder Card -->
+        <div class="connectivity-map-col fade-up">
+          <div class="map-card-wrap">
+            <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=1000&q=80" alt="Sunteck Naigaon Location Map" loading="lazy">
+            <div class="map-overlay-badge">
+              <span class="micro-label text-gold">STRATEGIC LOCATION</span>
+              <p class="map-badge-title">Naigaon East, Western Suburbs</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: Exclusive Festive Pricing -->
+  <section id="pricing" class="section-padding pricing-section">
+    <div class="site-container">
+      <div class="section-header-block text-center fade-up">
+        <span class="micro-label text-gold">EXPORT & FESTIVE OFFER</span>
+        <h2 class="section-headline serif text-white">Exclusive Festive Pricing</h2>
+        <p class="pricing-subtitle">Lock in unmatched early-bird rates for Naigaon's premier township.</p>
+      </div>
+
+      <!-- Pricing Cards Grid -->
+      <div class="pricing-cards-grid">
+        <!-- Card 1: 1 BHK Platinum -->
+        <div class="pricing-card fade-up">
+          <div class="pricing-badge">BESTSELLER</div>
+          <span class="pricing-config-label micro-label">PLATINUM RESIDENCE</span>
+          <h3 class="pricing-title serif">1 BHK Residence</h3>
+          <div class="pricing-carpet-tag">Carpet Area: <strong>407 sq.ft</strong></div>
+          <div class="pricing-price-box">
+            <span class="price-currency">₹</span>
+            <span class="price-amount">37</span>
+            <span class="price-unit">Lacs* Onwards</span>
+          </div>
+          <ul class="pricing-features-list">
+            <li>Optimal space utilization layout</li>
+            <li>Panoramic balcony & skyline view</li>
+            <li>Access to all 55+ township amenities</li>
+          </ul>
+          <a href="#sunteck-enquiry" class="btn-primary btn-gold btn-full">Get Best Price</a>
+        </div>
+
+        <!-- Card 2: 2 BHK Luxury -->
+        <div class="pricing-card featured-pricing fade-up">
+          <div class="pricing-badge gold-badge">MOST POPULAR</div>
+          <span class="pricing-config-label micro-label">GRAND RESIDENCE</span>
+          <h3 class="pricing-title serif">2 BHK Residence</h3>
+          <div class="pricing-carpet-tag">Carpet Area: <strong>550 sq.ft</strong></div>
+          <div class="pricing-price-box">
+            <span class="price-currency">₹</span>
+            <span class="price-amount">49</span>
+            <span class="price-unit">Lacs* Onwards</span>
+          </div>
+          <ul class="pricing-features-list">
+            <li>Expansive master suite & living hall</li>
+            <li>Dual bathroom configuration</li>
+            <li>Premium tower floor preference</li>
+          </ul>
+          <a href="#sunteck-enquiry" class="btn-primary btn-gold btn-full">Get Best Price</a>
+        </div>
+      </div>
+
+      <p class="pricing-disclaimer text-center fade-up">
+        *Prices subject to change without prior notice. Government charges, stamp duty, registration & taxes extra. T&C apply.
+      </p>
+    </div>
+  </section>
+
+  <!-- SECTION 6: Gallery (Mixed Image + Video Scroll Rail) -->
+  <section id="gallery" class="section-padding gallery-section">
+    <div class="site-container">
+      <div class="locations-header-flex fade-up">
+        <div>
+          <span class="micro-label text-gold">PROJECT GALLERY</span>
+          <h2 class="section-headline serif">Experience the Masterpiece</h2>
+        </div>
+        <div class="rail-nav-controls">
+          <button id="sunteck-prev-btn" class="rail-arrow-btn" aria-label="Previous gallery item">&larr;</button>
+          <button id="sunteck-next-btn" class="rail-arrow-btn" aria-label="Next gallery item">&rarr;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Gallery Rail Container (reuses main site carousel component + data-lenis-prevent) -->
+    <div class="locations-rail-outer">
+      <div id="sunteck-gallery-rail" class="locations-rail" data-lenis-prevent>
+        
+        <!-- Card 1: Exterior Elevation -->
+        <div class="video-card-916 gallery-card">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80" alt="Tower Elevation" loading="lazy">
+            <div class="card-gradient"></div>
+          </div>
+          <div class="card-content">
+            <span class="micro-label card-location-tag">EXTERIOR</span>
+            <h3 class="card-title serif">Tower Elevation & Skylines</h3>
+            <p class="card-count">Artist Impression</p>
+          </div>
+        </div>
+
+        <!-- Card 2: Video Walkthrough Card -->
+        <div class="video-card-916 gallery-card">
+          <div class="card-media">
+            <video class="rail-video" muted loop playsinline poster="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80">
+              <source src="https://assets.mixkit.co/videos/preview/mixkit-modern-architecture-building-under-a-clear-sky-41481-large.mp4" type="video/mp4">
+            </video>
+            <div class="video-play-overlay">
+              <div class="play-icon-circle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </div>
+            <div class="card-gradient"></div>
+          </div>
+          <div class="card-content">
+            <span class="micro-label card-location-tag">VIDEO TOUR</span>
+            <h3 class="card-title serif">Project AV & Walkthrough</h3>
+            <p class="card-count">02:45 Min Video</p>
+          </div>
+        </div>
+
+        <!-- Card 3: Grand Clubhouse -->
+        <div class="video-card-916 gallery-card">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=800&q=80" alt="Clubhouse Interior" loading="lazy">
+            <div class="card-gradient"></div>
+          </div>
+          <div class="card-content">
+            <span class="micro-label card-location-tag">AMENITY</span>
+            <h3 class="card-title serif">Clubhouse & Lounge</h3>
+            <p class="card-count">Actual Render</p>
+          </div>
+        </div>
+
+        <!-- Card 4: Show Flat Video -->
+        <div class="video-card-916 gallery-card">
+          <div class="card-media">
+            <video class="rail-video" muted loop playsinline poster="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80">
+              <source src="https://assets.mixkit.co/videos/preview/mixkit-luxurious-modern-house-exterior-at-dusk-41480-large.mp4" type="video/mp4">
+            </video>
+            <div class="video-play-overlay">
+              <div class="play-icon-circle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+            </div>
+            <div class="card-gradient"></div>
+          </div>
+          <div class="card-content">
+            <span class="micro-label card-location-tag">SHOW FLAT</span>
+            <h3 class="card-title serif">2 BHK Sample Flat Tour</h3>
+            <p class="card-count">01:30 Min Video</p>
+          </div>
+        </div>
+
+        <!-- Card 5: Landscaped Gardens -->
+        <div class="video-card-916 gallery-card">
+          <div class="card-media">
+            <img src="https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&w=800&q=80" alt="Landscaped Gardens" loading="lazy">
+            <div class="card-gradient"></div>
+          </div>
+          <div class="card-content">
+            <span class="micro-label card-location-tag">GREENERY</span>
+            <h3 class="card-title serif">Podium Gardens & Parks</h3>
+            <p class="card-count">Actual Site View</p>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Rail Progress Indicator -->
+      <div class="site-container">
+        <div class="rail-progress-track">
+          <div id="sunteck-gallery-progress" class="rail-progress-bar"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: 360° Virtual Tour (Fisheye360 Embed with Fallback Test) -->
+  <section id="sunteck-tour" class="section-padding tour-section">
+    <div class="site-container">
+      <div class="section-header-block fade-up">
+        <span class="micro-label text-gold">EXPLORE IN 360°</span>
+        <h2 class="section-headline serif">Take a Virtual Walk Through Sunteck Naigaon</h2>
+        <p class="tour-subtext">Immerse yourself in a full 360° interactive tour of the township architecture and layout.</p>
+      </div>
+
+      <!-- Tour Embed Container with JS Iframe Fallback Detection -->
+      <div class="tour-embed-container fade-up">
+        <iframe id="fisheye-360-iframe" src="https://fisheye360.in/view/Sunteck_Naigaon/" title="Sunteck Naigaon 360 Degree Virtual Tour" allowfullscreen loading="lazy"></iframe>
+
+        <!-- Fallback Overlay (Shown if iframe fails or user prefers direct window) -->
+        <div id="tour-fallback-card" class="tour-fallback-card">
+          <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80" alt="Sunteck Naigaon 360 Tour Preview" loading="lazy">
+          <div class="tour-fallback-overlay">
+            <span class="micro-label text-gold">INTERACTIVE VIRTUAL EXPERIENCE</span>
+            <h3 class="fallback-title serif">Launch Fullscreen 360° Tour</h3>
+            <p class="fallback-desc">Step inside Sunteck Naigaon with ultra-high definition panoramic views.</p>
+            <a href="https://fisheye360.in/view/Sunteck_Naigaon/" target="_blank" rel="noopener" class="btn-primary btn-gold">
+              <span>Launch 360° Tour</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 8: Enquiry / Contact Band -->
+  <section id="sunteck-enquiry" class="contact-section sunteck-enquiry-section">
+    <div id="sunteck-contact-bg" class="contact-bg-media">
+      <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1920&q=80" alt="Sunteck Naigaon Enquiry Background" loading="lazy">
+      <div class="contact-overlay"></div>
+    </div>
+
+    <div class="site-container contact-container">
+      <div class="contact-grid">
+        <!-- Left Column: Info & RERA Disclaimer -->
+        <div class="contact-info-col fade-up">
+          <span class="micro-label text-gold">UNCOVER WHAT'S IN STORE FOR YOU</span>
+          <h2 class="contact-headline serif text-white">
+            Schedule a Private Visit & Get Festive Pricing
+          </h2>
+          <p class="contact-subtext">
+            Connect directly with Sunteck Naigaon's authorized principal real estate advisors for inventory selection, site visits, and festive offers.
+          </p>
+
+          <div class="contact-direct-blocks">
+            <div class="direct-block">
+              <span class="micro-label">DIRECT ADVISORY LINE</span>
+              <a href="tel:+919876543210" class="direct-link">+91 (0) 22 4900 8888</a>
+            </div>
+            <div class="direct-block">
+              <span class="micro-label">WHATSAPP CONSULTATION</span>
+              <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="direct-link">+91 98765 43210</a>
+            </div>
+            <div class="direct-block rera-disclaimer-box">
+              <span class="micro-label text-gold">MAHARERA REGISTRATION</span>
+              <p class="direct-text rera-text">
+                RERA Registration No: <strong>P51900000123 / P51900000456</strong><br>
+                Available on website: <a href="https://maharera.mahaonline.gov.in" target="_blank" rel="noopener" style="text-decoration:underline;">maharera.mahaonline.gov.in</a>
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right Column: Inline Lead Capture Form -->
+        <div class="contact-form-col fade-up">
+          <form id="sunteck-lead-form" class="luxury-form" onsubmit="event.preventDefault(); alert('Thank you for your interest in Sunteck Naigaon. Our principal estate advisor will call you shortly.');">
+            <h3 class="form-title serif">Request Festive Call Back</h3>
+            
+            <div class="form-group">
+              <label for="sunteck-name" class="form-label">Full Name</label>
+              <input type="text" id="sunteck-name" class="form-input" placeholder="e.g. Alexander Morgan" required>
+            </div>
+
+            <div class="form-group">
+              <label for="sunteck-phone" class="form-label">Phone Number</label>
+              <div class="phone-input-wrap">
+                <select class="country-code-select" aria-label="Country Code">
+                  <option value="+91">+91 (IN)</option>
+                  <option value="+1">+1 (US/CA)</option>
+                  <option value="+44">+44 (UK)</option>
+                  <option value="+971">+971 (UAE)</option>
+                </select>
+                <input type="tel" id="sunteck-phone" class="form-input" placeholder="98765 43210" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="sunteck-email" class="form-label">Email Address</label>
+              <input type="email" id="sunteck-email" class="form-input" placeholder="alexander@example.com" required>
+            </div>
+
+            <div class="form-group">
+              <label for="sunteck-unit" class="form-label">Preferred Unit Configuration</label>
+              <select id="sunteck-unit" class="form-select" required>
+                <option value="" disabled selected>Select configuration</option>
+                <option value="1bhk">1 BHK Platinum (407 sq.ft — ₹37L+)</option>
+                <option value="2bhk">2 BHK Residence (550 sq.ft — ₹49L+)</option>
+                <option value="both">Interested in Both Configurations</option>
+              </select>
+            </div>
+
+            <div class="form-group consent-check-group">
+              <label class="checkbox-label">
+                <input type="checkbox" required checked>
+                <span>I authorize Sunteck Realty & Locate Homes to contact me via Call, SMS, or WhatsApp.</span>
+              </label>
+            </div>
+
+            <button type="submit" class="btn-primary btn-gold form-submit-btn">
+              <span>Submit Inquiry</span>
+              <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 9: Shared Locate Homes Footer -->
+  <footer class="site-footer">
+    <div class="site-container">
+      <!-- Footer Top Row -->
+      <div class="footer-top-row">
+        <div class="footer-brand-col">
+          <a href="index.html" class="brand-logo footer-logo">
+            <span class="logo-title text-white">LOCATE HOMES</span>
+            <span class="logo-tagline text-muted">ESTATES & RESIDENCES</span>
+          </a>
+          <p class="footer-brand-desc">
+            Prime real estate advisory for luxury residences & architectural estates. Partnered with Sunteck Realty.
+          </p>
+        </div>
+        <div class="footer-location-badge">
+          <span class="micro-label text-gold">BASED IN MUMBAI, INDIA</span>
+        </div>
+      </div>
+
+      <!-- Footer Columns Grid -->
+      <div class="footer-columns-grid">
+        <!-- Col 1: Explore -->
+        <div class="footer-col">
+          <h4 class="footer-col-title micro-label">EXPLORE</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html#about">About Locate Homes</a></li>
+            <li><a href="sunteck.html" class="text-gold">Sunteck Residences</a></li>
+            <li><a href="index.html#locations">Prime Locations</a></li>
+            <li><a href="index.html#process">Services & Process</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: Company -->
+        <div class="footer-col">
+          <h4 class="footer-col-title micro-label">COMPANY</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html#about">About Us</a></li>
+            <li><a href="index.html#process">Our Process</a></li>
+            <li><a href="index.html#marquee-section">Partners & Developers</a></li>
+            <li><a href="index.html#contact">Advisory Team</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Locations -->
+        <div class="footer-col">
+          <h4 class="footer-col-title micro-label">LOCATIONS</h4>
+          <ul class="footer-links-list">
+            <li><a href="index.html#locations">South Mumbai</a></li>
+            <li><a href="index.html#locations">Bandra West</a></li>
+            <li><a href="index.html#locations">Worli Sea Face</a></li>
+            <li><a href="index.html#locations">Alibaug Coastal</a></li>
+            <li><a href="sunteck.html">Naigaon East</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Socials -->
+        <div class="footer-col">
+          <h4 class="footer-col-title micro-label">CONNECT</h4>
+          <p class="footer-contact-item">+91 (0) 22 4900 8888</p>
+          <p class="footer-contact-item">inquiries@locatehomes.com</p>
+          
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">LN</a>
+            <a href="#" aria-label="YouTube">YT</a>
+            <a href="#" aria-label="Facebook">FB</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Legal Strip -->
+      <div class="footer-bottom-strip">
+        <p class="copyright-text">&copy; 2026 Locate Homes Realty & Sunteck Realty Partner Page.</p>
+        <div class="legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">RERA Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Sticky Utility Bar (Mobile Only - Call / Enquiry / WhatsApp) -->
+  <div id="sticky-utility-bar" class="mobile-sticky-utility-bar">
+    <a href="tel:+919876543210" class="utility-bar-item utility-call">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+      <span>Call Us</span>
+    </a>
+    <a href="#sunteck-enquiry" class="utility-bar-item utility-enquire">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+      <span>Enquire</span>
+    </a>
+    <a href="https://wa.me/919876543210?text=Hi%20Locate%20Homes,%20I'm%20interested%20in%20Sunteck%20Naigaon" target="_blank" rel="noopener" class="utility-bar-item utility-whatsapp">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+      <span>WhatsApp</span>
+    </a>
+  </div>
+
+  <!-- External JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.9/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>

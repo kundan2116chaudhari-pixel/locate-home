@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Locate Homes — Luxury Real Estate & Architectural Estates</title>
+  <meta name="description" content="Locate Homes offers curated luxury residential and commercial properties across prime destinations.">
+  
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <!-- 0% -> 100% Preloader Overlay -->
+  <div id="preloader" class="preloader">
+    <div class="preloader-content">
+      <div class="preloader-brand">
+        <span class="micro-label">LOCATE HOMES — LUXURY REAL ESTATE</span>
+      </div>
+      <div class="preloader-counter">
+        <span id="loader-percent">0</span><span class="percent-symbol">%</span>
+      </div>
+      <div class="preloader-bar-bg">
+        <div id="loader-bar" class="preloader-bar"></div>
+      </div>
+      <div class="preloader-sub">Loading curated experience...</div>
+    </div>
+  </div>
+
+  <!-- Sticky White Header -->
+  <header id="main-header" class="site-header">
+    <div class="header-container">
+      <!-- Left: Logo -->
+      <a href="#" class="brand-logo" aria-label="Locate Homes Home">
+        <span class="logo-title">LOCATE HOMES</span>
+        <span class="logo-tagline">ESTATES & RESIDENCES</span>
+      </a>
+
+      <!-- Center Nav Links -->
+      <nav class="desktop-nav" aria-label="Primary Navigation">
+        <ul class="nav-list">
+          <li><a href="#about" class="nav-link">About Us</a></li>
+          <li><a href="#locations" class="nav-link">Locations</a></li>
+          <li><a href="#process" class="nav-link">Services</a></li>
+          <li><a href="sunteck.html" class="nav-link nav-highlight">Sunteck</a></li>
+          <li><a href="#contact" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <!-- Right: Contact info & location label -->
+      <div class="header-right">
+        <div class="header-contact-meta">
+          <a href="tel:+919876543210" class="header-phone">+91 (0) 22 4900 8888</a>
+          <span class="header-location-label">BASED IN MUMBAI, INDIA</span>
+        </div>
+        <button id="mobile-menu-toggle" class="mobile-toggle-btn" aria-label="Toggle navigation menu">
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Fullscreen Overlay Menu -->
+  <div id="mobile-menu" class="mobile-menu-overlay" aria-hidden="true">
+    <div class="mobile-menu-inner">
+      <div class="mobile-menu-header">
+        <span class="logo-title">LOCATE HOMES</span>
+        <button id="mobile-menu-close" class="mobile-close-btn" aria-label="Close menu">&times;</button>
+      </div>
+      <nav class="mobile-nav">
+        <ul class="mobile-nav-list">
+          <li><a href="#about" class="mobile-nav-link">About Us</a></li>
+          <li><a href="#locations" class="mobile-nav-link">Locations</a></li>
+          <li><a href="#process" class="mobile-nav-link">Services</a></li>
+          <li><a href="sunteck.html" class="mobile-nav-link highlight">Sunteck</a></li>
+          <li><a href="#contact" class="mobile-nav-link">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="mobile-menu-footer">
+        <span class="micro-label">LOCATE HOMES REALTY</span>
+        <a href="tel:+919876543210" class="mobile-contact-line">+91 (0) 22 4900 8888</a>
+        <a href="mailto:inquiries@locatehomes.com" class="mobile-contact-line">inquiries@locatehomes.com</a>
+        <div class="mobile-location">BASED IN MUMBAI, INDIA</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- SECTION 1: Hero / Opener Section -->
+  <section id="hero" class="hero-section">
+    <!-- Background Video -->
+    <div class="hero-media-wrapper">
+      <video id="hero-video-buy" class="hero-video active" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80">
+        <source src="https://assets.mixkit.co/videos/preview/mixkit-modern-architecture-building-under-a-clear-sky-41481-large.mp4" type="video/mp4">
+      </video>
+      <div class="hero-overlay"></div>
+    </div>
+
+    <!-- Hero Content -->
+    <div class="hero-container">
+      <div class="hero-top-controls">
+        <span class="micro-label hero-badge">ARCHITECTURAL ESTATES & RESIDENCES</span>
+      </div>
+
+      <div class="hero-content">
+        <h1 id="hero-headline" class="hero-headline">
+          Elevating Luxury Living Across Prime Destinations.
+        </h1>
+        <p id="hero-subcopy" class="hero-subcopy">
+          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis, pulvinar dapibus leo.
+        </p>
+
+        <div class="hero-cta-wrapper">
+          <a href="#about" class="btn-primary" id="hero-cta">
+            <span>Explore Homes</span>
+            <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+              <polyline points="12 5 19 12 12 19"></polyline>
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Scroll Indicator -->
+      <a href="#about" class="hero-scroll-indicator" aria-label="Scroll to About section">
+        <span class="scroll-text">SCROLL</span>
+        <div class="scroll-line-wrap">
+          <div class="scroll-line"></div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <!-- SECTION 2: About Us Section -->
+  <section id="about" class="section-padding about-section">
+    <div class="site-container">
+      <div class="section-header-block fade-up">
+        <span class="micro-label">ABOUT LOCATE HOMES</span>
+      </div>
+
+      <div class="about-grid">
+        <!-- Left Column: Large Editorial Serif Statement -->
+        <div class="about-left fade-up">
+          <h2 class="section-headline serif">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore.
+          </h2>
+          <p class="about-lead">
+            Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
+          </p>
+          <a href="#contact" class="btn-text-arrow">
+            <span>Discover Our Philosophy</span>
+            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+          </a>
+        </div>
+
+        <!-- Right Column: Paragraph + Animated Stat Counters -->
+        <div class="about-right fade-up">
+          <p class="about-body-text">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
+          </p>
+
+          <!-- Stat Counters Block -->
+          <div class="stats-grid">
+            <div class="stat-card">
+              <div class="stat-number-wrap">
+                <span class="stat-number" data-target="15">0</span><span class="stat-plus">+</span>
+              </div>
+              <span class="stat-label">Years of Advisory Experience</span>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-number-wrap">
+                <span class="stat-number" data-target="450">0</span><span class="stat-plus">+</span>
+              </div>
+              <span class="stat-label">Luxury Residences Delivered</span>
+            </div>
+
+            <div class="stat-card">
+              <div class="stat-number-wrap">
+                <span class="stat-symbol">₹</span><span class="stat-number" data-target="3.5">0</span><span class="stat-plus">B+</span>
+              </div>
+              <span class="stat-label">Total Real Estate Portfolio</span>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Secondary Offset Image Block (Gerax signature overlapping visual) -->
+      <div class="about-imagery-block fade-up">
+        <div class="about-img-main">
+          <img src="https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1200&q=80" alt="Luxury Architectural Interior Living Area" loading="lazy">
+        </div>
+        <div class="about-img-offset">
+          <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=800&q=80" alt="Architectural Detail Perspective" loading="lazy">
+          <div class="offset-badge">
+            <span class="micro-label" style="color:#FFF;">CURATED SELECTION</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 3: Logo Marquee Strip (Dual Direction CSS Animation) -->
+  <section id="marquee-section" class="marquee-section">
+    <div class="site-container">
+      <div class="marquee-header fade-up">
+        <span class="micro-label">TRUSTED BY LEADING DEVELOPERS & PARTNERS</span>
+      </div>
+    </div>
+
+    <!-- Row 1: Scrolls Left to Right -->
+    <div class="marquee-row-wrapper marquee-row-1">
+      <div class="marquee-track track-left">
+        <div class="logo-item"><img src="logo/Agarwal logo (1).png" alt="Agarwal Group" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/Dhariwal final logo.png" alt="Dhariwal Group" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/Mayfair final logo.png" alt="Mayfair Housing" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/Poonam developer logo.png" alt="Poonam Developers" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/Rajlaxmi logo (1).png" alt="Rajlaxmi Group" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/cosmos logo.png" alt="Cosmos Group" loading="lazy"></div>
+
+        <div class="logo-item"><img src="logo/Agarwal logo (1).png" alt="Agarwal Group" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/Dhariwal final logo.png" alt="Dhariwal Group" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/Mayfair final logo.png" alt="Mayfair Housing" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/Poonam developer logo.png" alt="Poonam Developers" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/Rajlaxmi logo (1).png" alt="Rajlaxmi Group" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/cosmos logo.png" alt="Cosmos Group" loading="lazy"></div>
+
+        <div class="logo-item"><img src="logo/Agarwal logo (1).png" alt="Agarwal Group" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/Dhariwal final logo.png" alt="Dhariwal Group" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/Mayfair final logo.png" alt="Mayfair Housing" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/Poonam developer logo.png" alt="Poonam Developers" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/Rajlaxmi logo (1).png" alt="Rajlaxmi Group" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/cosmos logo.png" alt="Cosmos Group" loading="lazy"></div>
+      </div>
+    </div>
+
+    <!-- Row 2: Scrolls Right to Left -->
+    <div class="marquee-row-wrapper marquee-row-2">
+      <div class="marquee-track track-right">
+        <div class="logo-item"><img src="logo/cosmos logo.png" alt="Cosmos Group" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/Rajlaxmi logo (1).png" alt="Rajlaxmi Group" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/Poonam developer logo.png" alt="Poonam Developers" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/Mayfair final logo.png" alt="Mayfair Housing" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/Dhariwal final logo.png" alt="Dhariwal Group" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/Agarwal logo (1).png" alt="Agarwal Group" loading="lazy"></div>
+
+        <div class="logo-item"><img src="logo/cosmos logo.png" alt="Cosmos Group" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/Rajlaxmi logo (1).png" alt="Rajlaxmi Group" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/Poonam developer logo.png" alt="Poonam Developers" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/Mayfair final logo.png" alt="Mayfair Housing" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/Dhariwal final logo.png" alt="Dhariwal Group" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/Agarwal logo (1).png" alt="Agarwal Group" loading="lazy"></div>
+
+        <div class="logo-item"><img src="logo/cosmos logo.png" alt="Cosmos Group" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/Rajlaxmi logo (1).png" alt="Rajlaxmi Group" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/Poonam developer logo.png" alt="Poonam Developers" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/Mayfair final logo.png" alt="Mayfair Housing" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/Dhariwal final logo.png" alt="Dhariwal Group" loading="lazy"></div>
+        <div class="logo-item"><img src="logo/Agarwal logo (1).png" alt="Agarwal Group" loading="lazy"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 4: Location-Wise Videos Rail (9:16 Horizontal Snap & Drag Scroll) -->
+  <section id="locations" class="section-padding locations-section">
+    <div class="site-container">
+      <div class="locations-header-flex fade-up">
+        <div>
+          <span class="micro-label">EXPLORE BY LOCATION</span>
+          <h2 class="section-headline serif">Curated Destinations & Prime Enclaves</h2>
+        </div>
+        <div class="rail-nav-controls">
+          <button id="rail-prev-btn" class="rail-arrow-btn" aria-label="Previous locations">&larr;</button>
+          <button id="rail-next-btn" class="rail-arrow-btn" aria-label="Next locations">&rarr;</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Horizontal Video Cards Container -->
+    <div class="locations-rail-outer">
+      <div id="video-rail" class="locations-rail" data-lenis-prevent>
+        
+        <!-- Card 1: South Mumbai -->
+        <div class="video-card-916">
+          <div class="card-media">
+            <video class="rail-video" muted loop playsinline poster="https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=600&q=100">
+              <source src="https://assets.mixkit.co/videos/preview/mixkit-aerial-view-of-city-buildings-and-a-river-41528-large.mp4" type="video/mp4">
+            </video>
+            <div class="card-gradient"></div>
+          </div>
+          <div class="card-content">
+            <span class="micro-label card-location-tag">SOUTH MUMBAI</span>
+            <h3 class="card-title serif">Malabar Hill & Colaba</h3>
+            <p class="card-count">14 Signature Estates</p>
+            <a href="#contact" class="card-link">View Properties &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Card 2: Bandra West -->
+        <div class="video-card-916">
+          <div class="card-media">
+            <video class="rail-video" muted loop playsinline poster="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=600&q=100">
+              <source src="https://assets.mixkit.co/videos/preview/mixkit-luxurious-modern-house-exterior-at-dusk-41480-large.mp4" type="video/mp4">
+            </video>
+            <div class="card-gradient"></div>
+          </div>
+          <div class="card-content">
+            <span class="micro-label card-location-tag">BANDRA WEST</span>
+            <h3 class="card-title serif">Pali Hill & Carter Road</h3>
+            <p class="card-count">22 Luxury Residences</p>
+            <a href="#contact" class="card-link">View Properties &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Card 3: Worli Sea Face -->
+        <div class="video-card-916">
+          <div class="card-media">
+            <video class="rail-video" muted loop playsinline poster="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=600&q=100">
+              <source src="https://assets.mixkit.co/videos/preview/mixkit-modern-architecture-building-under-a-clear-sky-41481-large.mp4" type="video/mp4">
+            </video>
+            <div class="card-gradient"></div>
+          </div>
+          <div class="card-content">
+            <span class="micro-label card-location-tag">WORLI SEA FACE</span>
+            <h3 class="card-title serif">Sea-Facing Towers</h3>
+            <p class="card-count">18 High-Rise Mansions</p>
+            <a href="#contact" class="card-link">View Properties &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Card 4: Alibaug Coastal -->
+        <div class="video-card-916">
+          <div class="card-media">
+            <video class="rail-video" muted loop playsinline poster="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=600&q=100">
+              <source src="https://assets.mixkit.co/videos/preview/mixkit-villa-with-a-pool-in-a-sunny-day-42825-large.mp4" type="video/mp4">
+            </video>
+            <div class="card-gradient"></div>
+          </div>
+          <div class="card-content">
+            <span class="micro-label card-location-tag">ALIBAUG</span>
+            <h3 class="card-title serif">Private Beachfront Villas</h3>
+            <p class="card-count">9 Private Acreages</p>
+            <a href="#contact" class="card-link">View Properties &rarr;</a>
+          </div>
+        </div>
+
+        <!-- Card 5: Goa Estates -->
+        <div class="video-card-916">
+          <div class="card-media">
+            <video class="rail-video" muted loop playsinline poster="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=100">
+              <source src="https://assets.mixkit.co/videos/preview/mixkit-tropical-resort-with-swimming-pool-and-palm-trees-41477-large.mp4" type="video/mp4">
+            </video>
+            <div class="card-gradient"></div>
+          </div>
+          <div class="card-content">
+            <span class="micro-label card-location-tag">GOA</span>
+            <h3 class="card-title serif">Assagao & Anjuna Villas</h3>
+            <p class="card-count">11 Heritage Estates</p>
+            <a href="#contact" class="card-link">View Properties &rarr;</a>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- Rail Progress Indicator -->
+      <div class="site-container">
+        <div class="rail-progress-track">
+          <div id="rail-progress-bar" class="rail-progress-bar"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 5: "How We Help You" Numbered Process (Hover Background Crossfade) -->
+  <section id="process" class="section-padding process-section">
+    <!-- Hover Background Crossfade Layer (Gerax signature interaction) -->
+    <div class="process-bg-container">
+      <div class="process-bg-img active" style="background-image: url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=80');" data-index="01"></div>
+      <div class="process-bg-img" style="background-image: url('https://images.unsplash.com/photo-1600607687939-ce8a6c25118c?auto=format&fit=crop&w=1920&q=80');" data-index="02"></div>
+      <div class="process-bg-img" style="background-image: url('https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?auto=format&fit=crop&w=1920&q=80');" data-index="03"></div>
+      <div class="process-bg-img" style="background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1920&q=80');" data-index="04"></div>
+      <div class="process-overlay"></div>
+    </div>
+
+    <div class="site-container process-content-wrap">
+      <div class="process-header fade-up">
+        <span class="micro-label" style="color: rgba(255,255,255,0.7);">OUR PROCESS</span>
+        <h2 class="section-headline serif text-white">How We Help You Get the Best Homes</h2>
+      </div>
+
+      <div class="process-list">
+        <!-- Item 01 -->
+        <div class="process-item fade-up" data-index="01">
+          <div class="process-num">01</div>
+          <div class="process-info">
+            <h3 class="process-title serif">Curated Portfolio Search</h3>
+            <p class="process-desc">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Access off-market luxury listings matched precisely to your lifestyle requirements.
+            </p>
+          </div>
+          <div class="process-arrow">&rarr;</div>
+        </div>
+
+        <!-- Item 02 -->
+        <div class="process-item fade-up" data-index="02">
+          <div class="process-num">02</div>
+          <div class="process-info">
+            <h3 class="process-title serif">Private Concierge Visits</h3>
+            <p class="process-desc">
+              Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Discreet, scheduled walkthroughs guided by senior real estate advisors.
+            </p>
+          </div>
+          <div class="process-arrow">&rarr;</div>
+        </div>
+
+        <!-- Item 03 -->
+        <div class="process-item fade-up" data-index="03">
+          <div class="process-num">03</div>
+          <div class="process-info">
+            <h3 class="process-title serif">Strategic Negotiation & Value Structuring</h3>
+            <p class="process-desc">
+              Ut enim ad minim veniam, quis nostrud exercitation. Optimizing terms and pricing through deep market intelligence.
+            </p>
+          </div>
+          <div class="process-arrow">&rarr;</div>
+        </div>
+
+        <!-- Item 04 -->
+        <div class="process-item fade-up" data-index="04">
+          <div class="process-num">04</div>
+          <div class="process-info">
+            <h3 class="process-title serif">Seamless Legal Paperwork & Handover</h3>
+            <p class="process-desc">
+              Duis aute irure dolor in reprehenderit. Complete regulatory, titling, and white-glove key handover support.
+            </p>
+          </div>
+          <div class="process-arrow">&rarr;</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 6: Contact Section (Full-Bleed Image, Parallax, Lead Form) -->
+  <section id="contact" class="contact-section">
+    <div id="contact-parallax-bg" class="contact-bg-media">
+      <img src="https://images.unsplash.com/photo-1600607687920-4e2a09cf159d?auto=format&fit=crop&w=1920&q=80" alt="Luxury Architectural Estate Contact Background" loading="lazy">
+      <div class="contact-overlay"></div>
+    </div>
+
+    <div class="site-container contact-container">
+      <div class="contact-grid">
+        <!-- Left: Text & Info -->
+        <div class="contact-info-col fade-up">
+          <span class="micro-label" style="color: var(--accent-gold);">GET IN TOUCH</span>
+          <h2 class="contact-headline serif text-white">
+            Begin Your Real Estate Journey with Locate Homes.
+          </h2>
+          <p class="contact-subtext">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Schedule a private consultation with our principal estate advisors.
+          </p>
+
+          <div class="contact-direct-blocks">
+            <div class="direct-block">
+              <span class="micro-label">DIRECT PHONE</span>
+              <a href="tel:+919876543210" class="direct-link">+91 (0) 22 4900 8888</a>
+            </div>
+            <div class="direct-block">
+              <span class="micro-label">EMAIL INQUIRIES</span>
+              <a href="mailto:advisory@locatehomes.com" class="direct-link">advisory@locatehomes.com</a>
+            </div>
+            <div class="direct-block">
+              <span class="micro-label">HEADQUARTERS</span>
+              <p class="direct-text">Sunteck Centre, 5th Floor, BKC, Mumbai 400051</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Right: Inline Lead Generation Form -->
+        <div class="contact-form-col fade-up">
+          <form id="lead-form" class="luxury-form" onsubmit="event.preventDefault(); alert('Thank you. Your inquiry has been received by Locate Homes.');">
+            <h3 class="form-title serif">Request a Private Callback</h3>
+            
+            <div class="form-group">
+              <label for="form-name" class="form-label">Full Name</label>
+              <input type="text" id="form-name" class="form-input" placeholder="e.g. Alexander Morgan" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-phone" class="form-label">Phone Number</label>
+              <input type="tel" id="form-phone" class="form-input" placeholder="+91 98765 43210" required>
+            </div>
+
+            <div class="form-group">
+              <label for="form-interest" class="form-label">Interested Location</label>
+              <select id="form-interest" class="form-select" required>
+                <option value="" disabled selected>Select destination</option>
+                <option value="south-mumbai">South Mumbai</option>
+                <option value="bandra">Bandra West</option>
+                <option value="worli">Worli Sea Face</option>
+                <option value="alibaug">Alibaug Coastal</option>
+                <option value="goa">Goa Estates</option>
+                <option value="sunteck">Sunteck Featured Projects</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="form-message" class="form-label">Message / Preferences</label>
+              <textarea id="form-message" class="form-textarea" rows="3" placeholder="Tell us about your ideal property..."></textarea>
+            </div>
+
+            <button type="submit" class="btn-primary form-submit-btn">
+              <span>Submit Inquiry</span>
+              <svg class="btn-arrow" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><line x1="5" y1="12" x2="19" y2="12"></line><polyline points="12 5 19 12 12 19"></polyline></svg>
+            </button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- SECTION 7: Dark Footer -->
+  <footer class="site-footer">
+    <div class="site-container">
+      <!-- Footer Top Row -->
+      <div class="footer-top-row">
+        <div class="footer-brand-col">
+          <a href="#" class="brand-logo footer-logo">
+            <span class="logo-title text-white">LOCATE HOMES</span>
+            <span class="logo-tagline text-muted">ESTATES & RESIDENCES</span>
+          </a>
+          <p class="footer-brand-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Prime real estate advisory for luxury residences & architectural estates.
+          </p>
+        </div>
+        <div class="footer-location-badge">
+          <span class="micro-label" style="color: var(--accent-gold);">BASED IN MUMBAI, INDIA</span>
+        </div>
+      </div>
+
+      <!-- Footer Columns Grid -->
+      <div class="footer-columns-grid">
+        <!-- Col 1: Explore -->
+        <div class="footer-col">
+          <h4 class="footer-col-title micro-label">EXPLORE</h4>
+          <ul class="footer-links-list">
+            <li><a href="#about">About Locate Homes</a></li>
+            <li><a href="sunteck.html" class="text-gold">Sunteck Residences</a></li>
+            <li><a href="#locations">Prime Locations</a></li>
+            <li><a href="#process">Services & Process</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 2: Company -->
+        <div class="footer-col">
+          <h4 class="footer-col-title micro-label">COMPANY</h4>
+          <ul class="footer-links-list">
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#process">Our Process</a></li>
+            <li><a href="#marquee-section">Partners & Developers</a></li>
+            <li><a href="#contact">Advisory Team</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 3: Locations -->
+        <div class="footer-col">
+          <h4 class="footer-col-title micro-label">LOCATIONS</h4>
+          <ul class="footer-links-list">
+            <li><a href="#locations">South Mumbai</a></li>
+            <li><a href="#locations">Bandra West</a></li>
+            <li><a href="#locations">Worli Sea Face</a></li>
+            <li><a href="#locations">Alibaug Coastal</a></li>
+            <li><a href="#locations">Goa Estates</a></li>
+          </ul>
+        </div>
+
+        <!-- Col 4: Contact & Socials -->
+        <div class="footer-col">
+          <h4 class="footer-col-title micro-label">CONNECT</h4>
+          <p class="footer-contact-item">+91 (0) 22 4900 8888</p>
+          <p class="footer-contact-item">inquiries@locatehomes.com</p>
+          
+          <div class="footer-socials">
+            <a href="#" aria-label="Instagram">IG</a>
+            <a href="#" aria-label="LinkedIn">LN</a>
+            <a href="#" aria-label="YouTube">YT</a>
+            <a href="#" aria-label="Facebook">FB</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Footer Bottom Legal Strip -->
+      <div class="footer-bottom-strip">
+        <p class="copyright-text">&copy; 2026 Locate Homes Realty. All rights reserved.</p>
+        <div class="legal-links">
+          <a href="#">Privacy Policy</a>
+          <a href="#">Terms of Service</a>
+          <a href="#">RERA Disclaimer</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- External JavaScript Libraries -->
+  <script src="https://cdn.jsdelivr.net/npm/lenis@1.1.9/dist/lenis.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+
+  <!-- Application Script -->
+  <script src="app.js"></script>
+</body>
+</html>
