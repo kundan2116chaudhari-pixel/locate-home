@@ -78,37 +78,43 @@ document.addEventListener('DOMContentLoaded', () => {
   // 2. Preloader Animation (0% -> 100% Counter & Hero Reveal)
   // ------------------------------------------------------------------------
   const preloader = document.getElementById('preloader');
-  const loaderPercent = document.getElementById('loader-percent');
-  const loaderBar = document.getElementById('loader-bar');
+  const preloaderNum = document.getElementById('preloader-num') || document.getElementById('loader-percent');
 
   let count = { val: 0 };
 
-  if (preloader && loaderPercent && loaderBar) {
-    gsap.to(count, {
-      val: 100,
-      duration: 2.2,
-      ease: 'power2.inOut',
-      onUpdate: () => {
-        const rounded = Math.floor(count.val);
-        loaderPercent.textContent = rounded;
-        loaderBar.style.width = rounded + '%';
-      },
-      onComplete: () => {
-        // Fade out preloader overlay
-        preloader.classList.add('fade-out');
+  if (preloader) {
+    if (preloaderNum) {
+      gsap.to(count, {
+        val: 100,
+        duration: 1.8,
+        ease: 'power2.inOut',
+        onUpdate: () => {
+          const rounded = Math.floor(count.val);
+          preloaderNum.textContent = rounded;
+        },
+        onComplete: () => {
+          // Fade out preloader overlay
+          preloader.classList.add('fade-out');
 
-        // Trigger Hero entrance animation
-        animateHeroEntrance();
+          // Trigger Hero entrance animation
+          animateHeroEntrance();
 
-        // Initialize ScrollTrigger reveals after preloader finishes
-        initScrollReveals();
+          // Initialize ScrollTrigger reveals after preloader finishes
+          initScrollReveals();
 
-        // Recalculate layout metrics after preloader hides
-        if (typeof ScrollTrigger !== 'undefined') {
-          setTimeout(() => ScrollTrigger.refresh(), 400);
+          // Recalculate layout metrics after preloader hides
+          if (typeof ScrollTrigger !== 'undefined') {
+            setTimeout(() => ScrollTrigger.refresh(), 400);
+          }
         }
-      }
-    });
+      });
+    } else {
+      setTimeout(() => {
+        preloader.classList.add('fade-out');
+        animateHeroEntrance();
+        initScrollReveals();
+      }, 500);
+    }
   } else {
     animateHeroEntrance();
     initScrollReveals();
