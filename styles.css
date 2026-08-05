@@ -2111,19 +2111,21 @@ button {
 }
 
 .page-sunteck .btn-brochure-direct {
-  background: transparent !important;
+  background: linear-gradient(135deg, #D5812A 0%, #E7932A 100%) !important;
   color: #FFFFFF !important;
-  border: 1px solid rgba(213, 129, 42, 0.6) !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
-  backdrop-filter: blur(8px);
+  border: none !important;
+  box-shadow: 0 8px 25px rgba(213, 129, 42, 0.4) !important;
+  font-weight: 800 !important;
+  letter-spacing: 0.08em !important;
+  padding: 1rem 1.75rem !important;
+  border-radius: 40px !important;
 }
 
 .page-sunteck .btn-brochure-direct:hover {
-  background: rgba(213, 129, 42, 0.2) !important;
-  border-color: #E7932A !important;
+  background: linear-gradient(135deg, #C4721F 0%, #D5812A 100%) !important;
   color: #FFFFFF !important;
   transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(213, 129, 42, 0.4) !important;
+  box-shadow: 0 12px 35px rgba(213, 129, 42, 0.6) !important;
 }
 
 .page-sunteck .utility-enquire {
