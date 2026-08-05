@@ -170,41 +170,33 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // ------------------------------------------------------------------------
-  // 5. Buy / Rent Hero Background Toggle
+  // 5. Adaptive Mobile vs Desktop Hero Video Switcher
   // ------------------------------------------------------------------------
-  const toggleBuyBtn = document.getElementById('toggle-buy');
-  const toggleRentBtn = document.getElementById('toggle-rent');
-  const toggleContainer = document.querySelector('.hero-toggle-container');
-  const videoBuy = document.getElementById('hero-video-buy');
-  const videoRent = document.getElementById('hero-video-rent');
+  const heroVideo = document.getElementById('hero-video-buy');
+  const heroSource = document.getElementById('hero-video-src');
 
-  function switchHeroMode(mode) {
-    if (mode === 'buy') {
-      toggleBuyBtn.classList.add('active');
-      toggleBuyBtn.setAttribute('aria-pressed', 'true');
-      toggleRentBtn.classList.remove('active');
-      toggleRentBtn.setAttribute('aria-pressed', 'false');
-      toggleContainer.removeAttribute('data-state');
+  if (heroVideo && heroSource) {
+    const mobileSrc = heroVideo.getAttribute('data-mobile-src');
+    const desktopSrc = heroVideo.getAttribute('data-desktop-src');
 
-      videoRent.classList.remove('active');
-      videoBuy.classList.add('active');
-      videoBuy.play().catch(() => {});
-    } else if (mode === 'rent') {
-      toggleRentBtn.classList.add('active');
-      toggleRentBtn.setAttribute('aria-pressed', 'true');
-      toggleBuyBtn.classList.remove('active');
-      toggleBuyBtn.setAttribute('aria-pressed', 'false');
-      toggleContainer.setAttribute('data-state', 'rent');
+    function updateHeroVideoSource() {
+      const isMobile = window.innerWidth <= 768;
+      const targetSrc = isMobile ? mobileSrc : desktopSrc;
 
-      videoBuy.classList.remove('active');
-      videoRent.classList.add('active');
-      videoRent.play().catch(() => {});
+      if (targetSrc && heroSource.getAttribute('src') !== targetSrc) {
+        heroSource.src = targetSrc;
+        heroVideo.src = targetSrc;
+        heroVideo.load();
+        heroVideo.play().catch(() => {});
+      }
     }
-  }
 
-  if (toggleBuyBtn && toggleRentBtn) {
-    toggleBuyBtn.addEventListener('click', () => switchHeroMode('buy'));
-    toggleRentBtn.addEventListener('click', () => switchHeroMode('rent'));
+    updateHeroVideoSource();
+    let resizeTimer;
+    window.addEventListener('resize', () => {
+      clearTimeout(resizeTimer);
+      resizeTimer = setTimeout(updateHeroVideoSource, 250);
+    });
   }
 
   // ------------------------------------------------------------------------
