@@ -540,9 +540,18 @@ document.addEventListener('DOMContentLoaded', () => {
   function openVideoLightbox(videoSrc, title, tag) {
     if (!lightboxModal || !lightboxPlayer || !lightboxSource) return;
 
+    const unmuteBtn = document.getElementById('lightbox-unmute-btn');
+
+    // Reset video player state
+    lightboxPlayer.pause();
+    lightboxPlayer.removeAttribute('src');
     lightboxSource.src = videoSrc;
+    lightboxPlayer.src = videoSrc;
     lightboxPlayer.load();
-    lightboxPlayer.muted = false; // Enable full audio
+
+    // Enable full audio
+    lightboxPlayer.muted = false;
+    lightboxPlayer.volume = 1.0;
 
     if (lightboxTitle) lightboxTitle.textContent = title || 'Property Walkthrough';
     if (lightboxTag) lightboxTag.textContent = tag || 'PROJECT SHOWCASE';
@@ -551,13 +560,22 @@ document.addEventListener('DOMContentLoaded', () => {
     lightboxModal.setAttribute('aria-hidden', 'false');
     document.body.style.overflow = 'hidden';
 
+    if (unmuteBtn) unmuteBtn.style.display = 'none';
+
     // Auto-play video with audio
     const playPromise = lightboxPlayer.play();
     if (playPromise !== undefined) {
-      playPromise.catch(() => {
-        // Fallback for browser autoplay policies
+      playPromise.then(() => {
+        lightboxPlayer.muted = false;
+        lightboxPlayer.volume = 1.0;
+      }).catch((err) => {
+        console.warn('Autoplay with sound restricted by browser policy:', err);
+        // Play muted initially but show bright UNMUTE overlay button
         lightboxPlayer.muted = true;
         lightboxPlayer.play();
+        if (unmuteBtn) {
+          unmuteBtn.style.display = 'flex';
+        }
       });
     }
   }
@@ -567,10 +585,24 @@ document.addEventListener('DOMContentLoaded', () => {
 
     lightboxPlayer.pause();
     lightboxPlayer.currentTime = 0;
+    lightboxPlayer.removeAttribute('src');
     if (lightboxSource) lightboxSource.src = '';
     lightboxModal.classList.remove('is-open');
     lightboxModal.setAttribute('aria-hidden', 'true');
     document.body.style.overflow = '';
+  }
+
+  // Handle Unmute Overlay Button Click
+  const unmuteBtn = document.getElementById('lightbox-unmute-btn');
+  if (unmuteBtn) {
+    unmuteBtn.addEventListener('click', (e) => {
+      e.stopPropagation();
+      if (lightboxPlayer) {
+        lightboxPlayer.muted = false;
+        lightboxPlayer.volume = 1.0;
+        unmuteBtn.style.display = 'none';
+      }
+    });
   }
 
   // Attach click listener to video cards and play buttons
