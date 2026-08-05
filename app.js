@@ -624,4 +624,149 @@ document.addEventListener('DOMContentLoaded', () => {
       closeVideoLightbox();
     }
   });
+
+  // ------------------------------------------------------------------------
+  // 12. Sunteck E-Brochure Pop-Up Modal, Auto 10s Timer, Web3Forms & PDF Download
+  // ------------------------------------------------------------------------
+  const popupModal = document.getElementById('enquiry-popup-modal');
+  const popupCloseBtn = document.getElementById('popup-close');
+  const popupBackdrop = document.getElementById('popup-backdrop');
+  const popupForm = document.getElementById('popup-enquiry-form');
+  const popupStatus = document.getElementById('popup-form-status');
+  let popupTimer = null;
+  let hasSubmittedForm = false;
+
+  function openEnquiryModal() {
+    if (!popupModal || hasSubmittedForm) return;
+    popupModal.classList.add('is-open');
+    popupModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function closeEnquiryModal() {
+    if (!popupModal) return;
+    popupModal.classList.remove('is-open');
+    popupModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+    
+    // Schedule next pop-up in 10 seconds if user hasn't submitted yet
+    if (!hasSubmittedForm) {
+      clearTimeout(popupTimer);
+      popupTimer = setTimeout(openEnquiryModal, 10000);
+    }
+  }
+
+  // Auto 10-Second Initial Pop-Up Timer
+  if (popupModal) {
+    popupTimer = setTimeout(openEnquiryModal, 10000);
+  }
+
+  if (popupCloseBtn) popupCloseBtn.addEventListener('click', closeEnquiryModal);
+  if (popupBackdrop) popupBackdrop.addEventListener('click', closeEnquiryModal);
+
+  // Trigger Pop-up Modal on ALL Brochure / Pricing / Enquiry CTA Buttons
+  document.querySelectorAll('a[href*="brochure"], .download-brochure-btn, a[href="#sunteck-enquiry"], .btn-full, .utility-enquire').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      if (btn.closest('.video-card-169') || btn.classList.contains('btn-video-modal-trigger')) return;
+      e.preventDefault();
+      openEnquiryModal();
+    });
+  });
+
+  // Handle Form Submission (Web3Forms API + Instant PDF Download)
+  function handleFormSubmit(form, statusEl) {
+    form.addEventListener('submit', async (e) => {
+      e.preventDefault();
+
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalBtnText = submitBtn ? submitBtn.innerHTML : '';
+
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.innerHTML = '<span>Submitting &amp; Downloading...</span>';
+      }
+
+      if (statusEl) {
+        statusEl.className = 'form-status-msg';
+        statusEl.style.display = 'none';
+      }
+
+      const formData = new FormData(form);
+      if (!formData.has('access_key')) {
+        formData.append('access_key', 'c4517da0-4b38-40bd-b3de-ca3f3905ae1e');
+      }
+
+      try {
+        const response = await fetch('https://api.web3forms.com/submit', {
+          method: 'POST',
+          body: formData
+        });
+
+        const result = await response.json();
+
+        if (result.success) {
+          hasSubmittedForm = true;
+          clearTimeout(popupTimer);
+
+          if (statusEl) {
+            statusEl.className = 'form-status-msg success';
+            statusEl.textContent = 'Success! Your Sunteck E-Brochure PDF is downloading now...';
+          }
+
+          // Trigger automatic PDF download
+          const link = document.createElement('a');
+          link.href = 'sunteck_brochure.pdf';
+          link.download = 'Sunteck_Naigaon_E_Brochure.pdf';
+          document.body.appendChild(link);
+          link.click();
+          document.body.removeChild(link);
+
+          form.reset();
+
+          setTimeout(() => {
+            closeEnquiryModal();
+            if (submitBtn) {
+              submitBtn.disabled = false;
+              submitBtn.innerHTML = originalBtnText;
+            }
+          }, 3000);
+        } else {
+          throw new Error(result.message || 'Form submission failed');
+        }
+      } catch (err) {
+        console.error('Submission error:', err);
+        // Fallback: Trigger download regardless and notify user
+        const link = document.createElement('a');
+        link.href = 'sunteck_brochure.pdf';
+        link.download = 'Sunteck_Naigaon_E_Brochure.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
+
+        if (statusEl) {
+          statusEl.className = 'form-status-msg success';
+          statusEl.textContent = 'Thank you! Downloading Sunteck E-Brochure PDF...';
+        }
+
+        hasSubmittedForm = true;
+        clearTimeout(popupTimer);
+
+        setTimeout(() => {
+          closeEnquiryModal();
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.innerHTML = originalBtnText;
+          }
+        }, 2500);
+      }
+    });
+  }
+
+  if (popupForm) handleFormSubmit(popupForm, popupStatus);
+
+  const mainForm = document.getElementById('sunteck-lead-form');
+  if (mainForm) {
+    mainForm.removeAttribute('onsubmit');
+    handleFormSubmit(mainForm, null);
+  }
 });
