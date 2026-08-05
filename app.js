@@ -244,9 +244,29 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   // ------------------------------------------------------------------------
-  // 7. Global ScrollReveals & Animated Stat Counters
+  // 7. Global ScrollReveals (IntersectionObserver + GSAP) & Stat Counters
   // ------------------------------------------------------------------------
   function initScrollReveals() {
+    // IntersectionObserver for [data-reveal] & [data-line-reveal] (The Curve Spec)
+    if ('IntersectionObserver' in window) {
+      const revealObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-revealed');
+            revealObserver.unobserve(entry.target);
+          }
+        });
+      }, { threshold: 0.12 });
+
+      document.querySelectorAll('[data-reveal], .fade-up, .line-reveal-wrap').forEach(el => {
+        revealObserver.observe(el);
+      });
+    } else {
+      document.querySelectorAll('[data-reveal], .fade-up, .line-reveal-wrap').forEach(el => {
+        el.classList.add('is-revealed');
+      });
+    }
+
     if (typeof gsap === 'undefined' || typeof ScrollTrigger === 'undefined') return;
 
     // Staggered Fade-Up Elements

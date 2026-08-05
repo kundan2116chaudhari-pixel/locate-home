@@ -1,38 +1,54 @@
 /* --------------------------------------------------------------------------
-   1. Design Tokens & CSS Variables (Ultra-Premium Framer Dark Luxury)
+   1. Design Tokens & CSS Variables (The Curve — Virar West Aesthetic)
    -------------------------------------------------------------------------- */
 :root {
-  /* Premium Dark Obsidian Palette */
-  --bg-primary: #080A0D;          /* Absolute Luxury Black */
-  --bg-secondary: #0F1116;        /* Velvet Graphite */
-  --bg-card: #131620;             /* Deep Space Indigo-Black */
-  --bg-card-hover: #191C28;       /* Hover Glass */
-  --bg-dark: #050607;             /* Near-Void Black */
-  --bg-dark-card: #0C0E14;
-  
-  --text-dark: #F0F1F5;           /* Crisp Titanium White */
-  --text-muted: #7A8194;          /* Dusty Platinum */
-  --text-subtle: #4D5468;         /* Deep Muted Steel */
-  --text-light: #FAFAF8;
-  
-  --border-light: rgba(255, 255, 255, 0.06);
-  --border-mid: rgba(255, 255, 255, 0.10);
-  --border-dark: rgba(255, 255, 255, 0.15);
-  --border-gold: rgba(212, 175, 55, 0.22);
-  --border-gold-bright: rgba(229, 193, 88, 0.5);
-  
-  /* Imperial Gold — Multi-stop for rich warmth */
-  --accent-gold: #C9A84C;
-  --accent-gold-light: #E5C158;
+  /* Brand Champagne Gold Colors */
+  --gold: #B8963E;                 /* True Champagne Gold */
+  --gold-light: #D4B469;           /* Light Champagne Gold */
+  --gold-muted: rgba(184, 150, 62, 0.12); /* Subtle Gold Tint */
+  --accent-gold: #B8963E;
+  --accent-gold-light: #D4B469;
   --accent-gold-bright: #F5D97F;
-  --accent-gold-dim: #9A7D35;
-  --accent-gold-bg: rgba(212, 175, 55, 0.10);
-  --accent-gold-glow: rgba(212, 175, 55, 0.20);
-  --accent-black: #080A0D;
+  --accent-gold-bg: rgba(184, 150, 62, 0.12);
+  --accent-gold-glow: rgba(184, 150, 62, 0.25);
   
-  /* Typography */
-  --font-serif: 'Cormorant Garamond', Georgia, serif;
-  --font-sans: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+  /* Canvas & Background Surfaces */
+  --bg-primary: #FAF7F2;            /* Warm Ivory Main Canvas */
+  --bg-dark: #FAF7F2;               /* Warm Ivory Main Canvas */
+  --bg-secondary: #F0EBE1;          /* Deeper Warm Ivory (Alternating Sections) */
+  --bg-light: #F0EBE1;
+  --bg-card: #FEFCF9;               /* Near-White Card Surface */
+  --bg-dark-section: #1A1714;       /* Onyx Warm Charcoal (High-Contrast Sections) */
+  --bg-dark-card: #24201C;
+  
+  /* Typography & Text Colors */
+  --text-main: #1C1A16;             /* Deep Warm Black */
+  --text-dark: #1C1A16;
+  --text-muted: #7A7369;            /* Warm Muted Grey */
+  --text-subtle: #8A8379;
+  --text-gold: #B8963E;
+  --text-light: #FAF7F2;
+  
+  /* Auxiliary & Corporate Accent Colors */
+  --abhinav-blue: #0082C8;
+  --accent-blue: rgba(0, 130, 200, 0.08);
+  --whatsapp-green: #25D366;
+  --whatsapp-green-dark: #128C7E;
+  
+  /* Borders & Dividers */
+  --border-light: rgba(28, 26, 22, 0.08);
+  --border-mid: rgba(28, 26, 22, 0.15);
+  --border-dark: rgba(255, 255, 255, 0.12);
+  --border-gold: rgba(184, 150, 62, 0.25);
+  --border-gold-bright: rgba(212, 180, 105, 0.5);
+  
+  /* 3-Tier Typography System */
+  --font-display: 'Cinzel Decorative', 'Playfair Display', serif;
+  --font-heading: 'Playfair Display', 'Cormorant Garamond', serif;
+  --font-serif: 'Playfair Display', 'Cormorant Garamond', serif;
+  --font-sub: 'Cormorant Garamond', serif;
+  --font-body: 'Inter', system-ui, -apple-system, sans-serif;
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
   
   /* Layout & Spacing */
   --header-height: 80px;
@@ -40,13 +56,15 @@
   --container-padding: clamp(1.5rem, 5vw, 5rem);
   
   /* Shadows */
-  --shadow-gold: 0 0 60px rgba(212, 175, 55, 0.12);
-  --shadow-deep: 0 32px 80px rgba(0, 0, 0, 0.6);
+  --shadow-gold: 0 0 50px rgba(184, 150, 62, 0.15);
+  --shadow-deep: 0 25px 60px rgba(28, 26, 22, 0.12);
   
-  /* Transitions */
+  /* Motion & Easing System */
+  --ease-expo: cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-smooth: cubic-bezier(0.25, 0.46, 0.45, 0.94);
   --transition-fast: 0.22s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-medium: 0.48s cubic-bezier(0.16, 1, 0.3, 1);
-  --transition-slow: 0.75s cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-slow: 0.85s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 /* --------------------------------------------------------------------------
@@ -65,13 +83,9 @@ html {
 }
 
 body {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   background-color: var(--bg-primary);
-  /* Subtle ambient radial glow at center-top — signature Framer luxury feel */
-  background-image:
-    radial-gradient(ellipse 80% 50% at 50% -10%, rgba(180, 140, 40, 0.08) 0%, transparent 70%),
-    radial-gradient(ellipse 60% 40% at 80% 100%, rgba(80, 60, 20, 0.06) 0%, transparent 60%);
-  color: var(--text-dark);
+  color: var(--text-main);
   line-height: 1.6;
   overflow-x: hidden;
 }
@@ -95,8 +109,16 @@ button {
 }
 
 /* Typography & Layout Helpers */
-.serif {
-  font-family: var(--font-serif);
+.font-display {
+  font-family: var(--font-display);
+}
+
+.font-heading, .serif {
+  font-family: var(--font-heading);
+}
+
+.font-sub {
+  font-family: var(--font-sub);
 }
 
 .text-white {
@@ -108,25 +130,23 @@ button {
 }
 
 .text-gold {
-  color: var(--accent-gold-light) !important;
+  color: var(--gold) !important;
 }
 
 .text-gold-gradient {
-  background: linear-gradient(135deg, #FFFFFF 0%, #F5E5C0 40%, #D4AF37 100%);
+  background: linear-gradient(135deg, #1C1A16 0%, #B8963E 50%, #D4B469 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
 }
 
 .micro-label {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 0.68rem;
   font-weight: 700;
   letter-spacing: 0.28em;
   text-transform: uppercase;
-  color: var(--accent-gold-light);
-  /* Subtle inline gold glow */
-  text-shadow: 0 0 20px rgba(212, 175, 55, 0.4);
+  color: var(--gold);
 }
 
 /* Premium Gold Rule Divider */
@@ -137,17 +157,16 @@ button {
   margin-bottom: 1.25rem;
 }
 
-.gold-rule::before,
-.gold-rule::after {
+.gold-rule::before {
   content: '';
   display: block;
   height: 1px;
   width: 32px;
-  background: linear-gradient(90deg, transparent, var(--accent-gold-light));
+  background: linear-gradient(90deg, transparent, var(--gold));
 }
 
 .gold-rule::after {
-  background: linear-gradient(90deg, var(--accent-gold-light), transparent);
+  background: linear-gradient(90deg, var(--gold), transparent);
 }
 
 .section-padding {
@@ -161,12 +180,12 @@ button {
 }
 
 .section-headline {
-  font-family: var(--font-serif);
+  font-family: var(--font-heading);
   font-size: clamp(2.2rem, 4.2vw, 3.75rem);
-  font-weight: 400;
-  line-height: 1.1;
+  font-weight: 500;
+  line-height: 1.12;
   letter-spacing: -0.015em;
-  color: #FFFFFF;
+  color: var(--text-main);
   margin-top: 0.75rem;
 }
 
@@ -775,16 +794,12 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   6. About Us Section & Stat Counters (Rich Cream Canvas)
+   6. About Us Section & Stat Counters (The Curve Warm Ivory Canvas)
    -------------------------------------------------------------------------- */
 .about-section {
-  background-color: var(--bg-secondary);
-  background-image:
-    radial-gradient(ellipse 70% 60% at 100% 0%, rgba(212, 175, 55, 0.05) 0%, transparent 65%),
-    radial-gradient(ellipse 50% 40% at 0% 100%, rgba(212, 175, 55, 0.04) 0%, transparent 60%);
-  color: var(--text-dark);
-  /* Thin top gold line */
-  border-top: 1px solid rgba(212, 175, 55, 0.12);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
+  border-top: 1px solid var(--border-light);
 }
 
 .about-grid {
@@ -810,7 +825,7 @@ button {
 }
 
 .about-left .section-headline {
-  color: #FFFFFF !important;
+  color: var(--text-main) !important;
 }
 
 .about-lead {
@@ -832,11 +847,11 @@ button {
 }
 
 .btn-text-arrow {
-  color: var(--accent-gold-light);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.5);
+  color: var(--gold);
+  border-bottom: 1px solid var(--gold);
 }
 
-/* Stat Counters — Premium Glass Card with Gold Glow */
+/* Stat Counters — Modern Card Grid with Champagne Gold Sweep */
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
@@ -846,8 +861,7 @@ button {
   border: none;
   border-radius: 0;
   box-shadow: none;
-  /* Use gap-based separator lines */
-  border-top: 1px solid rgba(212, 175, 55, 0.15);
+  border-top: 1px solid var(--border-mid);
   padding-top: 2rem;
   margin-top: 1rem;
 }
@@ -856,7 +870,7 @@ button {
   display: flex;
   flex-direction: column;
   padding: 1.5rem 1.5rem 1.5rem 0;
-  border-right: 1px solid rgba(212, 175, 55, 0.12);
+  border-right: 1px solid var(--border-light);
   position: relative;
 }
 
@@ -872,8 +886,8 @@ button {
   left: 0;
   width: 0;
   height: 2px;
-  background: linear-gradient(90deg, var(--accent-gold-light), transparent);
-  transition: width 0.6s cubic-bezier(0.16, 1, 0.3, 1);
+  background: linear-gradient(90deg, var(--gold), transparent);
+  transition: width 0.6s var(--ease-expo);
 }
 
 .stat-card:hover::before {
@@ -881,17 +895,17 @@ button {
 }
 
 .stat-number-wrap {
-  font-family: var(--font-serif);
+  font-family: var(--font-heading);
   font-size: clamp(3rem, 5vw, 4.25rem);
-  font-weight: 400;
+  font-weight: 500;
   line-height: 1;
-  color: #FFFFFF;
+  color: var(--text-main);
   letter-spacing: -0.02em;
 }
 
 .stat-plus, .stat-symbol {
   font-size: 0.55em;
-  color: var(--accent-gold-light);
+  color: var(--gold);
   vertical-align: super;
   line-height: 0;
   position: relative;
@@ -935,8 +949,8 @@ button {
   height: clamp(220px, 32vw, 360px);
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 32px 80px rgba(0, 0, 0, 0.7), 0 0 0 1px var(--border-gold);
-  border: 3px solid var(--bg-secondary);
+  box-shadow: var(--shadow-deep);
+  border: 3px solid var(--bg-card);
 }
 
 .about-img-offset img {
@@ -949,37 +963,23 @@ button {
   position: absolute;
   bottom: 1rem;
   left: 1rem;
-  background: rgba(14, 15, 18, 0.88);
-  backdrop-filter: blur(8px);
+  background: var(--bg-dark-section);
+  color: #FFFFFF;
   border: 1px solid var(--border-gold);
   padding: 0.45rem 0.9rem;
   border-radius: 20px;
 }
 
 /* --------------------------------------------------------------------------
-   7. Logo Marquee Strip (Alternating Black & Cream Framed Cards)
+   7. Logo Marquee Strip (Warm Ivory Canvas & Framed Cards)
    -------------------------------------------------------------------------- */
 .marquee-section {
   padding: 5rem 0;
-  background: linear-gradient(180deg, #07080B 0%, #0C0E14 50%, #07080B 100%);
+  background-color: var(--bg-secondary);
   overflow: hidden;
-  border-top: 1px solid rgba(212, 175, 55, 0.18);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.18);
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
   position: relative;
-}
-
-/* Ambient center glow on marquee strip */
-.marquee-section::before {
-  content: '';
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 60%;
-  height: 60%;
-  background: radial-gradient(ellipse, rgba(212, 175, 55, 0.06) 0%, transparent 70%);
-  pointer-events: none;
-  z-index: 0;
 }
 
 .marquee-header {
@@ -2586,6 +2586,31 @@ button {
   font-size: 0.85rem;
   color: #FFFFFF;
   cursor: pointer;
+}
+
+/* --------------------------------------------------------------------------
+   Floating Action Buttons (The Curve Spec)
+   -------------------------------------------------------------------------- */
+.fab-whatsapp {
+  position: fixed;
+  bottom: 2.25rem;
+  right: 2.25rem;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #25D366 0%, #128C7E 100%);
+  color: #FFFFFF;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 10px 28px rgba(37, 211, 102, 0.45);
+  z-index: 990;
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+}
+
+.fab-whatsapp:hover {
+  transform: scale(1.12);
+  box-shadow: 0 16px 36px rgba(37, 211, 102, 0.6);
 }
 
 .consent-check-group {
