@@ -2438,23 +2438,7 @@ button {
 
 .amenities-marquee-row::before,
 .amenities-marquee-row::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  width: 120px;
-  height: 100%;
-  z-index: 5;
-  pointer-events: none;
-}
-
-.amenities-marquee-row::before {
-  left: 0;
-  background: linear-gradient(90deg, var(--sunteck-bg) 0%, transparent 100%);
-}
-
-.amenities-marquee-row::after {
-  right: 0;
-  background: linear-gradient(-90deg, var(--sunteck-bg) 0%, transparent 100%);
+  display: none;
 }
 
 .amenities-marquee-track {
@@ -2912,22 +2896,24 @@ button {
 }
 
 .price-currency {
-  font-family: var(--font-sunteck-headline);
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
   font-size: 2.2rem;
   font-weight: 700;
   color: #D5812A;
 }
 
 .price-amount {
-  font-family: var(--font-sunteck-headline);
-  font-size: 4rem;
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  font-size: 3.8rem;
   font-weight: 800;
   line-height: 1;
   color: #1C1A16;
+  letter-spacing: -0.02em;
 }
 
 .price-unit {
-  font-size: 1rem;
+  font-family: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  font-size: 0.95rem;
   font-weight: 700;
   color: #D5812A;
   text-transform: uppercase;
