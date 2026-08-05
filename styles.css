@@ -3118,3 +3118,206 @@ button {
 .footer-brand-desc {
   color: var(--text-muted) !important;
 }
+
+/* --------------------------------------------------------------------------
+   About Locate Home — Custom Subsections (The Curve Spec)
+   -------------------------------------------------------------------------- */
+.vm-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  margin-top: 3.5rem;
+}
+
+@media (min-width: 768px) {
+  .vm-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+.vm-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-mid);
+  padding: 2.5rem;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+  transition: transform var(--transition-medium), box-shadow var(--transition-medium), border-color var(--transition-medium);
+}
+
+.vm-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--gold);
+  box-shadow: 0 20px 40px rgba(184, 150, 62, 0.12);
+}
+
+.vm-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(180deg, var(--gold) 0%, var(--gold-light) 100%);
+}
+
+.vm-title {
+  font-family: var(--font-heading);
+  font-size: 1.5rem;
+  font-weight: 500;
+  color: var(--text-main);
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.vm-text {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  line-height: 1.7;
+}
+
+/* Services Grid */
+.about-services-wrap {
+  margin-top: 4.5rem;
+  padding-top: 3.5rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.25rem;
+  margin-top: 2rem;
+}
+
+.service-pill-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-mid);
+  padding: 1.25rem 1.5rem;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  font-size: 0.92rem;
+  font-weight: 600;
+  color: var(--text-main);
+  transition: all var(--transition-fast);
+}
+
+.service-pill-card:hover {
+  border-color: var(--gold);
+  background: var(--bg-secondary);
+  transform: translateX(4px);
+}
+
+.service-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--gold);
+  flex-shrink: 0;
+}
+
+/* Why Choose Us Grid */
+.why-choose-wrap {
+  margin-top: 4.5rem;
+  padding-top: 3.5rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.why-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.why-card {
+  background: var(--bg-card);
+  border: 1px solid var(--border-mid);
+  padding: 2.25rem;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: all var(--transition-medium);
+}
+
+.why-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-4px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.05);
+}
+
+.why-num {
+  font-family: var(--font-heading);
+  font-size: 1.8rem;
+  font-weight: 600;
+  color: var(--gold);
+}
+
+.why-title {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: var(--text-main);
+}
+
+.why-desc {
+  font-size: 0.92rem;
+  color: var(--text-muted);
+  line-height: 1.65;
+}
+
+/* Areas We Serve Cloud */
+.areas-serve-wrap {
+  margin-top: 4.5rem;
+  padding-top: 3.5rem;
+  border-top: 1px solid var(--border-light);
+}
+
+.areas-cloud {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 2rem;
+}
+
+.area-tag {
+  background: var(--bg-card);
+  border: 1px solid var(--border-mid);
+  color: var(--text-main);
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  padding: 0.6rem 1.25rem;
+  border-radius: 30px;
+  transition: all var(--transition-fast);
+}
+
+.area-tag:hover {
+  border-color: var(--gold);
+  background: var(--gold-muted);
+  color: var(--gold);
+  transform: translateY(-2px);
+}
+
+/* Motto Banner */
+.motto-banner-wrap {
+  margin-top: 4.5rem;
+  background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-card) 100%);
+  border: 1px solid var(--border-gold);
+  padding: clamp(2.5rem, 5vw, 4rem);
+  border-radius: 16px;
+  text-align: center;
+  box-shadow: var(--shadow-medium);
+}
+
+.motto-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.4rem, 3.2vw, 2.2rem);
+  font-weight: 500;
+  line-height: 1.35;
+  color: var(--text-main);
+  max-width: 960px;
+  margin: 0 auto;
+}
