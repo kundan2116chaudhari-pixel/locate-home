@@ -1427,12 +1427,15 @@ button {
   height: 100vh !important;
   z-index: 9999999 !important;
   display: flex !important;
-  align-items: center !important;
+  align-items: flex-start !important;
   justify-content: center !important;
+  padding: 2.5rem 1rem !important;
   opacity: 0;
   visibility: hidden;
   transition: opacity 0.4s var(--ease-expo), visibility 0.4s;
   pointer-events: none;
+  overflow-y: auto !important;
+  -webkit-overflow-scrolling: touch !important;
 }
 
 .enquiry-popup-modal.is-open {
@@ -1442,7 +1445,7 @@ button {
 }
 
 .popup-backdrop {
-  position: absolute;
+  position: fixed;
   inset: 0;
   background: rgba(15, 14, 12, 0.88);
   backdrop-filter: blur(12px);
@@ -1453,8 +1456,11 @@ button {
   position: relative;
   z-index: 2;
   width: min(92vw, 540px);
-  max-height: 92vh;
-  overflow-y: auto;
+  margin: auto !important;
+  max-height: calc(100vh - 4rem);
+  overflow-y: auto !important;
+  overscroll-behavior: contain !important;
+  -webkit-overflow-scrolling: touch !important;
   background: #FFFFFF;
   border-radius: 20px;
   padding: 2.5rem 2.25rem;
@@ -3259,15 +3265,24 @@ button {
 }
 
 .country-code-select {
-  width: 160px;
-  padding: 0.9rem 0.6rem;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 6px;
-  font-family: var(--font-sans);
-  font-size: 0.85rem;
-  color: #FFFFFF;
-  cursor: pointer;
+  width: 165px !important;
+  padding: 0.9rem 0.6rem !important;
+  background: #F8F6F2 !important;
+  border: 1.5px solid rgba(213, 129, 42, 0.3) !important;
+  border-radius: 8px !important;
+  font-family: var(--font-sunteck-body) !important;
+  font-size: 0.88rem !important;
+  font-weight: 600 !important;
+  color: #1C1A16 !important;
+  cursor: pointer !important;
+  outline: none !important;
+}
+
+.country-code-select option {
+  background-color: #FFFFFF !important;
+  color: #1C1A16 !important;
+  font-weight: 600 !important;
+  padding: 0.5rem !important;
 }
 
 /* --------------------------------------------------------------------------
