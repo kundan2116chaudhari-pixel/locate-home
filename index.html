@@ -280,11 +280,17 @@
       <div id="video-rail" class="locations-rail" data-lenis-prevent>
         
         <!-- Card 1: Naigaon & Sunteck -->
-        <div class="video-card-916">
+        <div class="video-card-916" data-action="lightbox" data-video-src="videos/Season naigaon final video with logo (1).mp4" data-title="Sunteck World & Park" data-tag="NAIGAON ESTATES">
           <div class="card-media">
             <video class="rail-video" muted loop playsinline poster="https://images.unsplash.com/photo-1567157577867-05ccb1388e66?auto=format&fit=crop&w=600&q=100">
               <source src="videos/Season naigaon final video with logo (1).mp4" type="video/mp4">
             </video>
+            <div class="video-play-overlay">
+              <div class="play-icon-circle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+              <span class="play-label-tag">Tap to Play with Audio</span>
+            </div>
             <div class="card-gradient"></div>
           </div>
           <div class="card-content">
@@ -296,11 +302,17 @@
         </div>
 
         <!-- Card 2: Sea Breeze -->
-        <div class="video-card-916">
+        <div class="video-card-916" data-action="lightbox" data-video-src="videos/Sea breeze final video upgrade quality.mp4" data-title="Oceanfront Luxury Towers" data-tag="SEA BREEZE">
           <div class="card-media">
             <video class="rail-video" muted loop playsinline poster="https://images.unsplash.com/photo-1600585154526-990dced4db0d?auto=format&fit=crop&w=600&q=100">
               <source src="videos/Sea breeze final video upgrade quality.mp4" type="video/mp4">
             </video>
+            <div class="video-play-overlay">
+              <div class="play-icon-circle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+              <span class="play-label-tag">Tap to Play with Audio</span>
+            </div>
             <div class="card-gradient"></div>
           </div>
           <div class="card-content">
@@ -312,11 +324,17 @@
         </div>
 
         <!-- Card 3: Cosmos Estates -->
-        <div class="video-card-916">
+        <div class="video-card-916" data-action="lightbox" data-video-src="videos/New cosmos final video with logo.mp4" data-title="Sky High Mansion Towers" data-tag="COSMOS ESTATES">
           <div class="card-media">
             <video class="rail-video" muted loop playsinline poster="https://images.unsplash.com/photo-1545324418-cc1a3fa10c00?auto=format&fit=crop&w=600&q=100">
               <source src="videos/New cosmos final video with logo.mp4" type="video/mp4">
             </video>
+            <div class="video-play-overlay">
+              <div class="play-icon-circle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+              <span class="play-label-tag">Tap to Play with Audio</span>
+            </div>
             <div class="card-gradient"></div>
           </div>
           <div class="card-content">
@@ -328,11 +346,17 @@
         </div>
 
         <!-- Card 4: Naigaon Luxury Living -->
-        <div class="video-card-916">
+        <div class="video-card-916" data-action="lightbox" data-video-src="videos/Season naigaon final video with logo (1).mp4" data-title="Masterpiece Living" data-tag="NAIGAON RESIDENCES">
           <div class="card-media">
             <video class="rail-video" muted loop playsinline poster="https://images.unsplash.com/photo-1613977257363-707ba9348227?auto=format&fit=crop&w=600&q=100">
               <source src="videos/Season naigaon final video with logo (1).mp4" type="video/mp4">
             </video>
+            <div class="video-play-overlay">
+              <div class="play-icon-circle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+              <span class="play-label-tag">Tap to Play with Audio</span>
+            </div>
             <div class="card-gradient"></div>
           </div>
           <div class="card-content">
@@ -344,11 +368,17 @@
         </div>
 
         <!-- Card 5: Cosmos Grand -->
-        <div class="video-card-916">
+        <div class="video-card-916" data-action="lightbox" data-video-src="videos/New cosmos final video with logo.mp4" data-title="Heritage Grand Estates" data-tag="COSMOS GRAND">
           <div class="card-media">
             <video class="rail-video" muted loop playsinline poster="https://images.unsplash.com/photo-1512917774080-9991f1c4c750?auto=format&fit=crop&w=600&q=100">
               <source src="videos/New cosmos final video with logo.mp4" type="video/mp4">
             </video>
+            <div class="video-play-overlay">
+              <div class="play-icon-circle">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><polygon points="5 3 19 12 5 21 5 3"/></svg>
+              </div>
+              <span class="play-label-tag">Tap to Play with Audio</span>
+            </div>
             <div class="card-gradient"></div>
           </div>
           <div class="card-content">
@@ -597,7 +627,22 @@
         </div>
       </div>
     </div>
-  </footer>
+  <!-- Full-Screen Video Lightbox Modal with Audio (The Curve Spec) -->
+  <div id="video-lightbox" class="video-lightbox-modal" aria-hidden="true" role="dialog">
+    <div class="lightbox-backdrop" id="lightbox-backdrop"></div>
+    <div class="lightbox-container">
+      <button class="lightbox-close-btn" id="lightbox-close" aria-label="Close video player">&times;</button>
+      <div class="lightbox-video-wrapper">
+        <video id="lightbox-player" class="lightbox-video" controls playsinline preload="auto">
+          <source id="lightbox-source" src="" type="video/mp4">
+        </video>
+      </div>
+      <div class="lightbox-caption">
+        <span id="lightbox-tag" class="micro-label">PROJECT SHOWCASE</span>
+        <h3 id="lightbox-title" class="lightbox-title">Property Walkthrough</h3>
+      </div>
+    </div>
+  </div>
 
   <!-- Floating WhatsApp Action Button (The Curve Spec) -->
   <a href="https://wa.me/919876543210" target="_blank" rel="noopener" class="fab-whatsapp" aria-label="Contact us on WhatsApp">

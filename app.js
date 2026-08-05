@@ -525,4 +525,80 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   });
+
+  // ------------------------------------------------------------------------
+  // 11. Full-Screen Video Lightbox Modal with Audio (The Curve Spec)
+  // ------------------------------------------------------------------------
+  const lightboxModal = document.getElementById('video-lightbox');
+  const lightboxPlayer = document.getElementById('lightbox-player');
+  const lightboxSource = document.getElementById('lightbox-source');
+  const lightboxTitle = document.getElementById('lightbox-title');
+  const lightboxTag = document.getElementById('lightbox-tag');
+  const lightboxClose = document.getElementById('lightbox-close');
+  const lightboxBackdrop = document.getElementById('lightbox-backdrop');
+
+  function openVideoLightbox(videoSrc, title, tag) {
+    if (!lightboxModal || !lightboxPlayer || !lightboxSource) return;
+
+    lightboxSource.src = videoSrc;
+    lightboxPlayer.load();
+    lightboxPlayer.muted = false; // Enable full audio
+
+    if (lightboxTitle) lightboxTitle.textContent = title || 'Property Walkthrough';
+    if (lightboxTag) lightboxTag.textContent = tag || 'PROJECT SHOWCASE';
+
+    lightboxModal.classList.add('is-open');
+    lightboxModal.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+
+    // Auto-play video with audio
+    const playPromise = lightboxPlayer.play();
+    if (playPromise !== undefined) {
+      playPromise.catch(() => {
+        // Fallback for browser autoplay policies
+        lightboxPlayer.muted = true;
+        lightboxPlayer.play();
+      });
+    }
+  }
+
+  function closeVideoLightbox() {
+    if (!lightboxModal || !lightboxPlayer) return;
+
+    lightboxPlayer.pause();
+    lightboxPlayer.currentTime = 0;
+    if (lightboxSource) lightboxSource.src = '';
+    lightboxModal.classList.remove('is-open');
+    lightboxModal.setAttribute('aria-hidden', 'true');
+    document.body.style.overflow = '';
+  }
+
+  // Attach click listener to video cards and play buttons
+  document.querySelectorAll('[data-action="lightbox"], .video-card-916').forEach(card => {
+    card.addEventListener('click', (e) => {
+      // Do not launch lightbox if clicking a direct page link like href="sunteck.html"
+      if (e.target.closest('.card-link[href^="sunteck"]')) return;
+
+      const videoSourceEl = card.querySelector('video source');
+      const videoSrc = card.getAttribute('data-video-src') || (videoSourceEl ? videoSourceEl.src : '');
+      const titleEl = card.querySelector('.card-title');
+      const title = card.getAttribute('data-title') || (titleEl ? titleEl.textContent : 'Property Walkthrough');
+      const tagEl = card.querySelector('.card-location-tag');
+      const tag = card.getAttribute('data-tag') || (tagEl ? tagEl.textContent : 'PROJECT SHOWCASE');
+
+      if (videoSrc) {
+        e.preventDefault();
+        openVideoLightbox(videoSrc, title, tag);
+      }
+    });
+  });
+
+  if (lightboxClose) lightboxClose.addEventListener('click', closeVideoLightbox);
+  if (lightboxBackdrop) lightboxBackdrop.addEventListener('click', closeVideoLightbox);
+
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && lightboxModal && lightboxModal.classList.contains('is-open')) {
+      closeVideoLightbox();
+    }
+  });
 });
