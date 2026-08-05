@@ -29,6 +29,30 @@
   --text-gold: #B8963E;
   --text-light: #FAF7F2;
   
+  /* --------------------------------------------------------------------------
+     Sunteck Exact Brand Match Tokens (Extracted Live from sunteckindia.com)
+     -------------------------------------------------------------------------- */
+  /* Free font substitution notes:
+     - Live Sunteck site uses proprietary 'Matter' (Displaay Type Foundry) for body & headings,
+       and 'Saol Display' for luxury serif headers.
+     - Using Google Fonts 'Plus Jakarta Sans' as the exact free geometric match for Matter,
+       and 'Playfair Display' / 'Cinzel' as the free match for Saol Display.
+  */
+  --sunteck-bg: #FFF9F2;                    /* Sunteck Live Off-White Warm Ivory Canvas */
+  --sunteck-bg-alt: #FEE3C6;                /* Sunteck Soft Gold/Peach Tint Section Canvas */
+  --sunteck-bg-card: #FFFFFF;               /* Pure White Card Surface */
+  --sunteck-text: #000000;                  /* Deep Charcoal Black Text */
+  --sunteck-text-muted: rgba(0, 0, 0, 0.7); /* Muted Text */
+  --sunteck-subheading: #B9B9B8;            /* Subheading Eyebrow Muted Gray */
+  --sunteck-accent: #D5812A;                /* Sunteck Live Golden Amber Accent */
+  --sunteck-accent-hover: #E7932A;          /* Sunteck Live Golden Amber Hover */
+  --sunteck-accent-bg: rgba(213, 129, 42, 0.12); /* Subtle Gold Badge Fill */
+  --sunteck-footer-bg: #111111;             /* Sunteck Dark Footer Background */
+  --sunteck-footer-text: #FFFFFF;           /* Sunteck Footer Text */
+  
+  --font-sunteck-headline: 'Playfair Display', 'Plus Jakarta Sans', serif;
+  --font-sunteck-body: 'Plus Jakarta Sans', 'Inter', sans-serif;
+  
   /* Auxiliary & Corporate Accent Colors */
   --abhinav-blue: #0082C8;
   --accent-blue: rgba(0, 130, 200, 0.08);
@@ -1887,14 +1911,26 @@ button {
 /* ==========================================================================
    12. SUNTECK MICROSITE PAGE SPECIFIC STYLES
    ========================================================================== */
-:root {
-  --sunteck-gold: #B8860B;
-  --sunteck-gold-light: #D4AF37;
-  --sunteck-gold-bg: rgba(184, 134, 11, 0.12);
+.page-sunteck {
+  background-color: var(--sunteck-bg);
+  color: var(--sunteck-text);
+  font-family: var(--font-sunteck-body);
 }
 
-.page-sunteck {
-  background-color: var(--bg-primary);
+.page-sunteck h1,
+.page-sunteck h2,
+.page-sunteck h3,
+.page-sunteck .section-headline {
+  font-family: var(--font-sunteck-headline);
+}
+
+.page-sunteck .micro-label,
+.page-sunteck .subheading {
+  font-family: var(--font-sunteck-body);
+  font-size: 12px;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  color: var(--sunteck-accent);
 }
 
 /* Sunteck Hero Customizations */
@@ -1910,11 +1946,11 @@ button {
   display: inline-flex;
   align-items: center;
   gap: 0.5rem;
-  background: rgba(184, 134, 11, 0.22);
-  border: 1px solid var(--sunteck-gold-light);
-  color: #F1D377;
+  background: var(--sunteck-accent-bg);
+  border: 1px solid var(--sunteck-accent);
+  color: #FFFFFF;
   padding: 0.5rem 1.1rem;
-  border-radius: 30px;
+  border-radius: 100px;
   font-weight: 700;
   backdrop-filter: blur(10px);
 }
