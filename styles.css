@@ -3095,3 +3095,26 @@ button {
     height: 380px;
   }
 }
+
+/* Total Premium Cream Canvas — Global Contrast Safeguards */
+.process-section .section-headline,
+.contact-section .contact-headline,
+.contact-section .section-headline,
+.pricing-section .section-headline,
+.site-footer .logo-title {
+  color: var(--text-main) !important;
+}
+
+.process-section .micro-label,
+.contact-section .micro-label,
+.site-footer .logo-tagline,
+.site-footer .footer-col-title {
+  color: var(--gold) !important;
+}
+
+.contact-subtext,
+.process-desc,
+.pricing-subtitle,
+.footer-brand-desc {
+  color: var(--text-muted) !important;
+}
