@@ -1422,17 +1422,41 @@ button {
   margin-bottom: 0.5rem;
 }
 
+.card-links-row {
+  display: flex;
+  align-items: center;
+  gap: 1.25rem;
+  margin-top: 0.25rem;
+}
+
 .card-link {
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.1em;
   text-transform: uppercase;
-  color: #FFFFFF;
+  color: var(--gold);
   transition: color var(--transition-fast);
+  cursor: pointer;
 }
 
 .card-link:hover {
-  color: var(--accent-gold);
+  color: #FFFFFF;
+}
+
+.card-video-trigger {
+  color: var(--gold);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+}
+
+.sunteck-direct-link {
+  color: rgba(255, 255, 255, 0.85);
+  font-size: 0.75rem;
+}
+
+.sunteck-direct-link:hover {
+  color: var(--gold);
 }
 
 /* Progress Track */
