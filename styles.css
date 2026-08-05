@@ -1931,6 +1931,21 @@ button {
   color: #D5812A !important;
 }
 
+/* Sunteck Official Navigation Header Logo */
+.sunteck-header-logo {
+  display: flex !important;
+  align-items: center !important;
+  text-decoration: none !important;
+  flex-direction: row !important;
+}
+
+.sunteck-nav-logo-img {
+  width: 148px !important;
+  height: 40px !important;
+  object-fit: contain !important;
+  display: block !important;
+}
+
 .page-sunteck .hero-developer-tag {
   color: #E7932A !important;
   margin-bottom: 0.75rem;
