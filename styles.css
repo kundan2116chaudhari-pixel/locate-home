@@ -349,26 +349,26 @@ button {
 
 .brand-logo {
   display: flex;
-  flex-direction: column;
+  align-items: center;
 }
 
-.logo-title {
-  font-family: var(--font-heading);
-  font-size: 1.6rem;
-  font-weight: 600;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--text-main);
-  line-height: 1.1;
+.brand-logo-img {
+  height: 48px;
+  width: auto;
+  object-fit: contain;
+  display: block;
 }
 
-.logo-tagline {
-  font-family: var(--font-body);
-  font-size: 0.58rem;
-  font-weight: 700;
-  letter-spacing: 0.3em;
-  text-transform: uppercase;
-  color: var(--gold);
+@media (min-width: 1024px) {
+  .brand-logo-img {
+    height: 56px;
+  }
+}
+
+.mobile-logo-img {
+  height: 40px;
+  width: auto;
+  object-fit: contain;
 }
 
 .desktop-nav {
