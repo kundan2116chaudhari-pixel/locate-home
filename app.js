@@ -334,55 +334,23 @@ document.addEventListener('DOMContentLoaded', () => {
   const railNextBtn = document.getElementById('rail-next-btn');
 
   if (videoRail) {
-    let isMouseDown = false;
-    let startX, scrollLeft;
-
-    // Arrow Button Navigation
+    let currentTranslate = 0;
     if (railPrevBtn) {
       railPrevBtn.addEventListener('click', () => {
-        videoRail.scrollBy({ left: -360, behavior: 'smooth' });
+        videoRail.style.animationPlayState = 'paused';
+        currentTranslate += 340;
+        if (currentTranslate > 0) currentTranslate = 0;
+        videoRail.style.transform = `translate3d(${currentTranslate}px, 0, 0)`;
       });
     }
 
     if (railNextBtn) {
       railNextBtn.addEventListener('click', () => {
-        videoRail.scrollBy({ left: 360, behavior: 'smooth' });
+        videoRail.style.animationPlayState = 'paused';
+        currentTranslate -= 340;
+        videoRail.style.transform = `translate3d(${currentTranslate}px, 0, 0)`;
       });
     }
-
-    // Mouse Drag events for Desktop
-    videoRail.addEventListener('mousedown', (e) => {
-      isMouseDown = true;
-      videoRail.classList.add('is-dragging');
-      startX = e.pageX - videoRail.offsetLeft;
-      scrollLeft = videoRail.scrollLeft;
-    });
-
-    const stopDragging = () => {
-      if (!isMouseDown) return;
-      isMouseDown = false;
-      videoRail.classList.remove('is-dragging');
-    };
-
-    videoRail.addEventListener('mouseleave', stopDragging);
-    videoRail.addEventListener('mouseup', stopDragging);
-
-    videoRail.addEventListener('mousemove', (e) => {
-      if (!isMouseDown) return;
-      e.preventDefault();
-      const x = e.pageX - videoRail.offsetLeft;
-      const walk = (x - startX) * 1.8;
-      videoRail.scrollLeft = scrollLeft - walk;
-    });
-
-    // Update Progress Bar on Scroll
-    videoRail.addEventListener('scroll', () => {
-      const maxScroll = videoRail.scrollWidth - videoRail.clientWidth;
-      if (maxScroll > 0 && railProgressBar) {
-        const percentage = (videoRail.scrollLeft / maxScroll) * 100;
-        railProgressBar.style.width = Math.max(15, percentage) + '%';
-      }
-    });
 
     // Video Hover Autoplay in Rail
     const videoCards = document.querySelectorAll('.video-card-916');
