@@ -1915,161 +1915,72 @@ button {
   background-color: var(--sunteck-bg);
   color: var(--sunteck-text);
   font-family: var(--font-sunteck-body);
+  --gold: #D5812A;
+  --gold-light: #E7932A;
+  --gold-muted: rgba(213, 129, 42, 0.15);
+  --accent-gold: #D5812A;
+  --accent-gold-light: #E7932A;
+  --accent-gold-bright: #FF9E3B;
+  --accent-gold-bg: rgba(213, 129, 42, 0.15);
+  --accent-gold-glow: rgba(213, 129, 42, 0.35);
+  --border-gold: rgba(213, 129, 42, 0.3);
+  --text-gold: #D5812A;
 }
 
-/* Sunteck Co-Branded Navigation Header Logo */
-.sunteck-header-logo {
-  display: flex;
-  align-items: center;
-  gap: 0.75rem;
-  text-decoration: none;
+.page-sunteck .text-gold {
+  color: #D5812A !important;
 }
 
-.sunteck-nav-logo-img {
-  height: 34px;
-  width: auto;
-  display: block;
-}
-
-.logo-divider {
-  color: var(--sunteck-accent);
-  font-size: 1.2rem;
-  font-weight: 300;
-  opacity: 0.5;
-}
-
-.cobrand-tag {
-  display: flex;
-  flex-direction: column;
-  line-height: 1.1;
-}
-
-.cobrand-tag .logo-title {
-  font-size: 0.85rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  color: var(--text-main);
-}
-
-.cobrand-tag .logo-tagline {
-  font-size: 0.58rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  color: var(--sunteck-accent);
-}
-
-.page-sunteck h1,
-.page-sunteck h2,
-.page-sunteck h3,
-.page-sunteck .section-headline {
-  font-family: var(--font-sunteck-headline);
-}
-
-.page-sunteck .micro-label,
-.page-sunteck .subheading {
-  font-family: var(--font-sunteck-body);
-  font-size: 12px;
-  letter-spacing: 3px;
-  text-transform: uppercase;
-  color: var(--sunteck-accent);
-}
-
-/* Sunteck Hero Customizations */
-.sunteck-hero-section {
-  min-height: 700px;
-}
-
-.sunteck-hero-overlay {
-  background: linear-gradient(180deg, rgba(10, 11, 12, 0.5) 0%, rgba(10, 11, 12, 0.82) 100%);
-}
-
-.sunteck-status-badge {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.5rem;
-  background: var(--sunteck-accent-bg);
-  border: 1px solid var(--sunteck-accent);
-  color: #FFFFFF;
-  padding: 0.5rem 1.1rem;
-  border-radius: 100px;
-  font-weight: 700;
-  backdrop-filter: blur(10px);
-}
-
-.sunteck-status-badge.live-status-badge {
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.28), rgba(184, 134, 11, 0.4));
-  border-color: #F5D97F;
-  box-shadow: 0 4px 15px rgba(212, 175, 55, 0.25);
-}
-
-.sunteck-status-badge.badge-secondary {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.2);
-  color: rgba(255, 255, 255, 0.9);
-}
-
-.sunteck-status-badge svg {
-  color: #FFD700;
-  animation: statusPulse 2s infinite ease-in-out;
-}
-
-@keyframes statusPulse {
-  0%, 100% { opacity: 1; transform: scale(1); }
-  50% { opacity: 0.5; transform: scale(0.85); }
-}
-
-.btn-brochure-direct {
-  background: transparent !important;
-  color: #FFFFFF !important;
-  border: 1px solid rgba(241, 211, 119, 0.5) !important;
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
-  backdrop-filter: blur(8px);
-}
-
-.btn-brochure-direct:hover {
-  background: rgba(241, 211, 119, 0.15) !important;
-  border-color: #F1D377 !important;
-  color: #F1D377 !important;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.3) !important;
-}
-
-.hero-developer-tag {
-  color: var(--sunteck-gold-light);
+.page-sunteck .hero-developer-tag {
+  color: #E7932A !important;
   margin-bottom: 0.75rem;
   display: block;
 }
 
-.sunteck-headline {
-  font-size: clamp(2.6rem, 5.8vw, 5.2rem);
-  color: #FFFFFF;
-  margin-bottom: 1.25rem;
+.page-sunteck .sunteck-status-badge.live-status-badge {
+  background: rgba(213, 129, 42, 0.28) !important;
+  border-color: #E7932A !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 4px 15px rgba(213, 129, 42, 0.35) !important;
 }
 
-.sunteck-subcopy {
-  font-size: clamp(1.05rem, 2vw, 1.3rem);
-  color: rgba(255, 255, 255, 0.9);
-  max-width: 720px;
-  margin-bottom: 2.5rem;
+.page-sunteck .sunteck-status-badge svg {
+  color: #E7932A !important;
 }
 
-.sunteck-cta-row {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  gap: 1.25rem;
+.page-sunteck .btn-gold {
+  background: linear-gradient(135deg, #D5812A 0%, #E7932A 100%) !important;
+  color: #FFFFFF !important;
+  box-shadow: 0 8px 25px rgba(213, 129, 42, 0.4) !important;
+  border: none !important;
 }
 
-.btn-gold {
-  background-color: var(--sunteck-gold-light) !important;
-  color: #0A0B0C !important;
-  box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3) !important;
-}
-
-.btn-gold:hover {
-  background-color: #E5C158 !important;
+.page-sunteck .btn-gold:hover {
+  background: linear-gradient(135deg, #E7932A 0%, #F59E38 100%) !important;
+  color: #FFFFFF !important;
   transform: translateY(-2px);
-  box-shadow: 0 12px 35px rgba(212, 175, 55, 0.45) !important;
+  box-shadow: 0 12px 35px rgba(213, 129, 42, 0.55) !important;
+}
+
+.page-sunteck .btn-brochure-direct {
+  background: transparent !important;
+  color: #FFFFFF !important;
+  border: 1px solid rgba(213, 129, 42, 0.6) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3) !important;
+  backdrop-filter: blur(8px);
+}
+
+.page-sunteck .btn-brochure-direct:hover {
+  background: rgba(213, 129, 42, 0.2) !important;
+  border-color: #E7932A !important;
+  color: #FFFFFF !important;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 30px rgba(213, 129, 42, 0.4) !important;
+}
+
+.page-sunteck .utility-enquire {
+  background: #D5812A !important;
+  color: #FFFFFF !important;
 }
 
 .btn-secondary-outline {
