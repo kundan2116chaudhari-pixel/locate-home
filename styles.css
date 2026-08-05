@@ -2082,7 +2082,8 @@ button {
    -------------------------------------------------------------------------- */
 .sunteck-videos-section {
   background-color: var(--sunteck-bg-alt);
-  padding: 5rem 0;
+  padding: 7rem 0 5rem 0;
+  scroll-margin-top: 90px;
   border-top: 1px solid var(--border-gold);
   border-bottom: 1px solid var(--border-gold);
 }
@@ -2131,48 +2132,64 @@ button {
   transform: scale(1.06);
 }
 
+/* Force override any top-level .video-play-overlay positioning */
 .video-card-169 .video-play-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.25) 0%, rgba(0, 0, 0, 0.65) 100%);
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 0.85rem;
+  position: absolute !important;
+  inset: 0 !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  transform: none !important;
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.3) 0%, rgba(0, 0, 0, 0.7) 100%) !important;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center !important;
+  justify-content: center !important;
+  gap: 0.85rem !important;
   transition: background var(--transition-fast);
-  z-index: 3;
+  z-index: 3 !important;
+  pointer-events: auto !important;
 }
 
 .video-card-169:hover .video-play-overlay {
-  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background: linear-gradient(180deg, rgba(0, 0, 0, 0.15) 0%, rgba(0, 0, 0, 0.55) 100%) !important;
 }
 
 .video-card-169 .play-icon-circle {
-  width: 76px;
-  height: 76px;
-  background: linear-gradient(135deg, #D5812A 0%, #E7932A 100%);
-  color: #FFFFFF;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 10px 35px rgba(213, 129, 42, 0.7);
-  transition: transform var(--transition-fast);
-  animation: playPulse 2.2s infinite cubic-bezier(0.25, 0, 0, 1);
-}
-
-@keyframes playPulse {
-  0% { box-shadow: 0 0 0 0 rgba(213, 129, 42, 0.8); transform: scale(1); }
-  50% { box-shadow: 0 0 0 24px rgba(213, 129, 42, 0); transform: scale(1.08); }
-  100% { box-shadow: 0 0 0 0 rgba(213, 129, 42, 0); transform: scale(1); }
+  width: 76px !important;
+  height: 76px !important;
+  background: linear-gradient(135deg, #D5812A 0%, #E7932A 100%) !important;
+  color: #FFFFFF !important;
+  border-radius: 50% !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 10px 35px rgba(213, 129, 42, 0.7) !important;
+  transition: transform var(--transition-fast) !important;
+  animation: playPulse 2.2s infinite cubic-bezier(0.25, 0, 0, 1) !important;
+  transform: none !important;
 }
 
 .video-card-169:hover .play-icon-circle {
-  transform: scale(1.15);
+  transform: scale(1.15) !important;
+}
+
+.video-card-top-badge {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  z-index: 4;
+  font-size: 0.7rem;
+  font-weight: 800;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #FFFFFF;
+  background: rgba(0, 0, 0, 0.75);
+  padding: 0.35rem 0.85rem;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  backdrop-filter: blur(8px);
 }
 
 .video-play-label {
