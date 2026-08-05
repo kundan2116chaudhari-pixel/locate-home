@@ -134,7 +134,7 @@ button {
 }
 
 .text-gold-gradient {
-  background: linear-gradient(135deg, #1C1A16 0%, #B8963E 50%, #D4B469 100%);
+  background: linear-gradient(135deg, #FFFFFF 0%, #F5E5C0 40%, #B8963E 100%);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
   display: inline-block;
@@ -715,8 +715,9 @@ button {
   align-items: center;
   gap: 0.85rem;
   padding: 1.15rem 2.5rem;
-  background: linear-gradient(135deg, #E5C158 0%, #C9A84C 60%, #A8862F 100%);
-  color: #080A0D;
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  color: #FFFFFF !important;
+  font-family: var(--font-body);
   font-size: 0.8rem;
   font-weight: 700;
   letter-spacing: 0.14em;
@@ -724,8 +725,8 @@ button {
   border-radius: 50px;
   position: relative;
   transition: all var(--transition-fast);
-  box-shadow: 0 8px 30px rgba(212, 175, 55, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.25);
-  border: none;
+  box-shadow: 0 8px 30px rgba(184, 150, 62, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.25);
   overflow: hidden;
 }
 
@@ -1279,10 +1280,10 @@ button {
    -------------------------------------------------------------------------- */
 .process-section {
   position: relative;
-  background-color: var(--bg-dark);
+  background-color: var(--bg-dark-section);
   background-image:
-    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(212, 175, 55, 0.05) 0%, transparent 65%),
-    radial-gradient(ellipse 50% 40% at 0% 0%, rgba(212, 175, 55, 0.04) 0%, transparent 60%);
+    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(184, 150, 62, 0.08) 0%, transparent 65%),
+    radial-gradient(ellipse 50% 40% at 0% 0%, rgba(184, 150, 62, 0.05) 0%, transparent 60%);
   color: var(--text-light);
   overflow: hidden;
 }
@@ -1552,11 +1553,11 @@ button {
    11. Dark Footer
    -------------------------------------------------------------------------- */
 .site-footer {
-  background-color: var(--bg-dark);
+  background-color: var(--bg-dark-section);
   color: var(--text-light);
   padding-top: 5rem;
   padding-bottom: 3rem;
-  border-top: 1px solid var(--border-dark);
+  border-top: 1px solid var(--border-gold);
 }
 
 .footer-top-row {
