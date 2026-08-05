@@ -1160,31 +1160,56 @@ button {
 }
 
 .locations-rail-outer {
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(-50vw + 50%);
+  margin-right: calc(-50vw + 50%);
+  overflow: hidden;
   position: relative;
+  padding: 1rem 0 2rem 0;
+}
+
+.locations-rail-outer::before,
+.locations-rail-outer::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 80px;
+  z-index: 5;
+  pointer-events: none;
+}
+
+.locations-rail-outer::before {
+  left: 0;
+  background: linear-gradient(90deg, #0E0F12 0%, transparent 100%);
+}
+
+.locations-rail-outer::after {
+  right: 0;
+  background: linear-gradient(-90deg, #0E0F12 0%, transparent 100%);
 }
 
 .locations-rail {
   display: flex;
   gap: 1.75rem;
-  padding: 0.5rem var(--container-padding) 2rem var(--container-padding);
-  overflow-x: auto;
-  scroll-snap-type: x mandatory;
-  scrollbar-width: none;
-  -ms-overflow-style: none;
-  cursor: grab;
-  user-select: none;
-  touch-action: pan-y;
-  overscroll-behavior-x: contain;
+  width: max-content;
+  will-change: transform;
+  animation: videoCarouselMarquee 42s linear infinite;
+  padding: 0.5rem 0;
 }
 
-.locations-rail::-webkit-scrollbar {
-  display: none;
+.locations-rail-outer:hover .locations-rail,
+.locations-rail:hover {
+  animation-play-state: paused;
 }
 
-.locations-rail.is-dragging {
-  cursor: grabbing;
-  scroll-snap-type: none !important;
+@keyframes videoCarouselMarquee {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
 }
 
 /* 9:16 Vertical Video Card — Premium */
