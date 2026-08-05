@@ -299,18 +299,18 @@ button {
   left: 0;
   width: 100%;
   height: var(--header-height);
-  background-color: rgba(8, 10, 13, 0.82);
+  background-color: rgba(250, 247, 242, 0.90);
   backdrop-filter: blur(20px) saturate(180%);
   -webkit-backdrop-filter: blur(20px) saturate(180%);
-  border-bottom: 1px solid rgba(212, 175, 55, 0.08);
+  border-bottom: 1px solid rgba(184, 150, 62, 0.15);
   z-index: 1000;
   transition: all var(--transition-fast);
 }
 
 .site-header.is-scrolled {
-  background-color: rgba(8, 10, 13, 0.97);
-  box-shadow: 0 1px 0 rgba(212, 175, 55, 0.15), 0 20px 60px rgba(0, 0, 0, 0.7);
-  border-bottom-color: rgba(212, 175, 55, 0.2);
+  background-color: rgba(250, 247, 242, 0.98);
+  box-shadow: 0 4px 20px rgba(28, 26, 22, 0.08);
+  border-bottom-color: rgba(184, 150, 62, 0.3);
 }
 
 .header-container {
@@ -329,25 +329,22 @@ button {
 }
 
 .logo-title {
-  font-family: var(--font-serif);
+  font-family: var(--font-heading);
   font-size: 1.6rem;
-  font-weight: 500;
+  font-weight: 600;
   letter-spacing: 0.12em;
   text-transform: uppercase;
-  background: linear-gradient(135deg, #FFFFFF 0%, #F0E4B8 60%, #D4AF37 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: var(--text-main);
   line-height: 1.1;
 }
 
 .logo-tagline {
-  font-family: var(--font-sans);
+  font-family: var(--font-body);
   font-size: 0.58rem;
   font-weight: 700;
   letter-spacing: 0.3em;
   text-transform: uppercase;
-  color: var(--accent-gold);
-  opacity: 0.9;
+  color: var(--gold);
 }
 
 .desktop-nav {
@@ -370,7 +367,7 @@ button {
 .nav-link {
   font-size: 0.9rem;
   font-weight: 500;
-  color: rgba(255, 255, 255, 0.82);
+  color: var(--text-main);
   letter-spacing: 0.02em;
   position: relative;
   padding: 0.25rem 0;
@@ -378,7 +375,7 @@ button {
 }
 
 .nav-link:hover {
-  color: #FFFFFF;
+  color: var(--gold);
 }
 
 .nav-link::after {
@@ -388,7 +385,7 @@ button {
   left: 0;
   width: 0%;
   height: 1.5px;
-  background-color: var(--accent-gold-light);
+  background-color: var(--gold);
   transition: width var(--transition-fast);
 }
 
@@ -398,13 +395,13 @@ button {
 
 .nav-link.nav-highlight {
   font-weight: 700;
-  color: #F1D377;
+  color: #FFFFFF !important;
   padding: 0.5rem 1.25rem;
-  background: linear-gradient(135deg, rgba(212, 175, 55, 0.18), rgba(165, 128, 45, 0.12));
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
   border-radius: 30px;
-  border: 1px solid rgba(212, 175, 55, 0.45);
+  border: 1px solid var(--gold);
   transition: all var(--transition-fast);
-  box-shadow: 0 4px 20px rgba(212, 175, 55, 0.2), inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  box-shadow: 0 4px 15px rgba(184, 150, 62, 0.25);
 }
 
 .nav-link.nav-highlight::after {
@@ -412,10 +409,9 @@ button {
 }
 
 .nav-link.nav-highlight:hover {
-  background: linear-gradient(135deg, #E5C158 0%, #C9A84C 100%);
-  color: #080A0D;
-  border-color: #E5C158;
-  box-shadow: 0 8px 28px rgba(212, 175, 55, 0.5);
+  background: linear-gradient(135deg, var(--gold-light) 0%, var(--gold) 100%);
+  color: #FFFFFF !important;
+  box-shadow: 0 8px 25px rgba(184, 150, 62, 0.45);
   transform: translateY(-1px);
 }
 
@@ -441,7 +437,7 @@ button {
 .header-phone {
   font-size: 0.85rem;
   font-weight: 600;
-  color: #FFFFFF;
+  color: var(--text-main);
   letter-spacing: 0.02em;
 }
 
@@ -449,7 +445,7 @@ button {
   font-size: 0.65rem;
   font-weight: 700;
   letter-spacing: 0.18em;
-  color: var(--accent-gold);
+  color: var(--gold);
 }
 
 .mobile-toggle-btn {
@@ -1276,19 +1272,18 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   9. Numbered Process Section (Hover Background Crossfade)
+   9. Numbered Process Section (Total Premium Cream Canvas)
    -------------------------------------------------------------------------- */
 .process-section {
   position: relative;
-  background-color: var(--bg-dark-section);
-  background-image:
-    radial-gradient(ellipse 80% 60% at 50% 100%, rgba(184, 150, 62, 0.08) 0%, transparent 65%),
-    radial-gradient(ellipse 50% 40% at 0% 0%, rgba(184, 150, 62, 0.05) 0%, transparent 60%);
-  color: var(--text-light);
+  background-color: var(--bg-secondary);
+  color: var(--text-main);
   overflow: hidden;
+  border-top: 1px solid var(--border-light);
+  border-bottom: 1px solid var(--border-light);
 }
 
-/* Background Crossfade Layer (Gerax Signature) */
+/* Background Crossfade Layer */
 .process-bg-container {
   position: absolute;
   top: 0;
@@ -1307,7 +1302,7 @@ button {
   background-size: cover;
   background-position: center;
   opacity: 0;
-  transition: opacity 0.8s cubic-bezier(0.16, 1, 0.3, 1), transform 1.2s ease;
+  transition: opacity 0.8s var(--ease-expo), transform 1.2s ease;
   transform: scale(1.03);
 }
 
@@ -1322,7 +1317,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(10,11,12,0.85) 0%, rgba(10,11,12,0.92) 100%);
+  background: linear-gradient(180deg, rgba(240, 235, 225, 0.90) 0%, rgba(240, 235, 225, 0.98) 100%);
 }
 
 .process-content-wrap {
@@ -1345,56 +1340,55 @@ button {
   align-items: center;
   gap: 2rem;
   padding: 2.5rem 0;
-  border-bottom: 1px solid var(--border-dark);
+  border-bottom: 1px solid var(--border-mid);
   cursor: pointer;
   transition: padding var(--transition-medium), background-color var(--transition-medium);
 }
 
 .process-item:hover {
   padding-left: 1.5rem;
-  background-color: rgba(255, 255, 255, 0.04);
+  background-color: rgba(184, 150, 62, 0.06);
 }
 
 .process-num {
-  font-family: var(--font-serif);
+  font-family: var(--font-heading);
   font-size: 2rem;
-  font-weight: 400;
-  color: var(--accent-gold);
+  font-weight: 500;
+  color: var(--gold);
 }
 
 .process-title {
   font-size: 1.8rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
-  color: #FFFFFF;
+  color: var(--text-main);
 }
 
 .process-desc {
   font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-muted);
   max-width: 720px;
   line-height: 1.6;
 }
 
 .process-arrow {
   font-size: 1.5rem;
-  color: rgba(255, 255, 255, 0.5);
-  transition: transform var(--transition-fast), color var(--transition-fast);
+  color: var(--gold);
+  transition: transform var(--transition-fast);
 }
 
 .process-item:hover .process-arrow {
   transform: translateX(8px);
-  color: #FFFFFF;
 }
 
 /* --------------------------------------------------------------------------
-   10. Contact Section & Lead Form
+   10. Contact Section & Lead Form (Total Premium Cream Canvas)
    -------------------------------------------------------------------------- */
 .contact-section {
   position: relative;
   padding: clamp(5rem, 9vw, 9rem) 0;
-  background-color: var(--bg-dark);
-  color: var(--text-light);
+  background-color: var(--bg-primary);
+  color: var(--text-main);
   overflow: hidden;
 }
 
@@ -1419,7 +1413,7 @@ button {
   left: 0;
   width: 100%;
   height: 100%;
-  background: linear-gradient(180deg, rgba(10, 11, 12, 0.88) 0%, rgba(10, 11, 12, 0.95) 100%);
+  background: linear-gradient(180deg, rgba(250, 247, 242, 0.92) 0%, rgba(250, 247, 242, 0.98) 100%);
 }
 
 .contact-container {
@@ -1447,11 +1441,12 @@ button {
   line-height: 1.12;
   margin-top: 0.5rem;
   margin-bottom: 1.5rem;
+  color: var(--text-main);
 }
 
 .contact-subtext {
   font-size: 1.05rem;
-  color: rgba(255, 255, 255, 0.75);
+  color: var(--text-muted);
   margin-bottom: 3rem;
   line-height: 1.6;
 }
@@ -1471,36 +1466,36 @@ button {
 .direct-link {
   font-size: 1.2rem;
   font-weight: 600;
-  color: #FFFFFF;
+  color: var(--text-main);
   transition: color var(--transition-fast);
 }
 
 .direct-link:hover {
-  color: var(--accent-gold);
+  color: var(--gold);
 }
 
 .direct-text {
   font-size: 0.95rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-muted);
 }
 
 /* Luxury Inline Form */
 .luxury-form {
-  background: rgba(255, 255, 255, 0.05);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.15);
+  background: var(--bg-card);
+  border: 1px solid var(--border-mid);
   padding: clamp(2rem, 4vw, 3.25rem);
-  border-radius: 8px;
+  border-radius: 12px;
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  box-shadow: var(--shadow-deep);
 }
 
 .form-title {
   font-size: 1.8rem;
   font-weight: 500;
   margin-bottom: 0.5rem;
-  color: #FFFFFF;
+  color: var(--text-main);
 }
 
 .form-group {
@@ -1514,34 +1509,34 @@ button {
   font-weight: 700;
   letter-spacing: 0.15em;
   text-transform: uppercase;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--text-main);
 }
 
 .form-input, .form-select, .form-textarea {
   width: 100%;
   padding: 0.9rem 1.1rem;
-  background: rgba(255, 255, 255, 0.08);
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 4px;
+  background: var(--bg-primary);
+  border: 1px solid var(--border-mid);
+  border-radius: 6px;
   font-family: var(--font-sans);
   font-size: 0.95rem;
-  color: #FFFFFF;
+  color: var(--text-main);
   transition: border-color var(--transition-fast), background var(--transition-fast);
 }
 
 .form-input::placeholder, .form-textarea::placeholder {
-  color: rgba(255, 255, 255, 0.4);
+  color: var(--text-muted);
 }
 
 .form-input:focus, .form-select:focus, .form-textarea:focus {
   outline: none;
-  border-color: var(--accent-gold);
-  background: rgba(255, 255, 255, 0.12);
+  border-color: var(--gold);
+  background: #FFFFFF;
 }
 
 .form-select option {
-  background-color: var(--bg-dark);
-  color: #FFFFFF;
+  background-color: var(--bg-card);
+  color: var(--text-main);
 }
 
 .form-submit-btn {
@@ -1550,11 +1545,11 @@ button {
 }
 
 /* --------------------------------------------------------------------------
-   11. Dark Footer
+   11. Total Premium Cream Footer
    -------------------------------------------------------------------------- */
 .site-footer {
-  background-color: var(--bg-dark-section);
-  color: var(--text-light);
+  background-color: var(--bg-secondary);
+  color: var(--text-main);
   padding-top: 5rem;
   padding-bottom: 3rem;
   border-top: 1px solid var(--border-gold);
@@ -1567,7 +1562,7 @@ button {
   justify-content: space-between;
   gap: 2rem;
   padding-bottom: 4rem;
-  border-bottom: 1px solid var(--border-dark);
+  border-bottom: 1px solid var(--border-mid);
 }
 
 .footer-brand-col {
@@ -1586,7 +1581,7 @@ button {
   grid-template-columns: repeat(2, 1fr);
   gap: 3rem;
   padding: 4rem 0;
-  border-bottom: 1px solid var(--border-dark);
+  border-bottom: 1px solid var(--border-mid);
 }
 
 @media (min-width: 900px) {
@@ -1597,7 +1592,12 @@ button {
 
 .footer-col-title {
   margin-bottom: 1.5rem;
-  color: var(--accent-gold);
+  color: var(--gold);
+  font-family: var(--font-body);
+  font-size: 0.8rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
 }
 
 .footer-links-list {
@@ -1609,17 +1609,17 @@ button {
 
 .footer-links-list a {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.7);
+  color: var(--text-main);
   transition: color var(--transition-fast);
 }
 
 .footer-links-list a:hover {
-  color: #FFFFFF;
+  color: var(--gold);
 }
 
 .footer-contact-item {
   font-size: 0.9rem;
-  color: rgba(255, 255, 255, 0.8);
+  color: var(--text-main);
   margin-bottom: 0.5rem;
 }
 
@@ -1633,20 +1633,21 @@ button {
   width: 38px;
   height: 38px;
   border-radius: 50%;
-  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: var(--bg-card);
+  border: 1px solid var(--border-mid);
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 0.75rem;
   font-weight: 700;
-  color: #FFFFFF;
-  transition: background var(--transition-fast), border-color var(--transition-fast);
+  color: var(--text-main);
+  transition: all var(--transition-fast);
 }
 
 .footer-socials a:hover {
-  background: var(--accent-gold);
-  border-color: var(--accent-gold);
-  color: var(--bg-dark);
+  background: var(--gold);
+  border-color: var(--gold);
+  color: #FFFFFF;
 }
 
 .footer-bottom-strip {
@@ -1675,7 +1676,7 @@ button {
 }
 
 .legal-links a:hover {
-  color: #FFFFFF;
+  color: var(--gold);
 }
 
 /* ==========================================================================
