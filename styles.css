@@ -2111,6 +2111,108 @@ button {
 }
 
 /* --------------------------------------------------------------------------
+   Sunteck 16:9 Video Showcase Section
+   -------------------------------------------------------------------------- */
+.sunteck-videos-section {
+  background-color: var(--sunteck-bg-alt);
+  padding: 5rem 0;
+  border-top: 1px solid var(--border-gold);
+  border-bottom: 1px solid var(--border-gold);
+}
+
+.video-169-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.video-card-169 {
+  position: relative;
+  border-radius: 16px;
+  overflow: hidden;
+  border: 1px solid var(--border-gold);
+  background: #000000;
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.15);
+  transition: transform var(--transition-fast), box-shadow var(--transition-fast);
+  cursor: pointer;
+}
+
+.video-card-169:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 60px rgba(213, 129, 42, 0.25);
+  border-color: var(--sunteck-accent);
+}
+
+.video-media-169 {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+.video-media-169 video,
+.video-media-169 img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.video-card-169 .video-play-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.35);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background var(--transition-fast);
+  z-index: 3;
+}
+
+.video-card-169:hover .video-play-overlay {
+  background: rgba(0, 0, 0, 0.15);
+}
+
+.video-card-169 .play-icon-circle {
+  width: 64px;
+  height: 64px;
+  background: linear-gradient(135deg, var(--sunteck-accent), var(--sunteck-accent-hover));
+  color: #FFFFFF;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 30px rgba(213, 129, 42, 0.5);
+  transition: transform var(--transition-fast);
+}
+
+.video-card-169:hover .play-icon-circle {
+  transform: scale(1.15);
+}
+
+.video-card-169 .card-info-169 {
+  padding: 1.5rem;
+  background: #FFFFFF;
+}
+
+.video-card-169 .card-title-169 {
+  font-family: var(--font-sunteck-headline);
+  font-size: 1.25rem;
+  color: var(--sunteck-text);
+  margin-top: 0.25rem;
+}
+
+.video-card-169 .card-sub-169 {
+  font-size: 0.85rem;
+  color: var(--sunteck-text-muted);
+  margin-top: 0.2rem;
+}
+
+/* --------------------------------------------------------------------------
    Sunteck Section 2: Highlights & Stats Band
    -------------------------------------------------------------------------- */
 .sunteck-highlights-section {
