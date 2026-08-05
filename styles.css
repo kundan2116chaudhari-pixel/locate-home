@@ -350,10 +350,12 @@ button {
 .brand-logo {
   display: flex;
   align-items: center;
+  gap: 0.75rem;
+  text-decoration: none;
 }
 
 .brand-logo-img {
-  height: 48px;
+  height: 42px;
   width: auto;
   object-fit: contain;
   display: block;
@@ -361,12 +363,36 @@ button {
 
 @media (min-width: 1024px) {
   .brand-logo-img {
-    height: 56px;
+    height: 48px;
   }
 }
 
+.brand-text-wrap {
+  display: flex;
+  flex-direction: column;
+}
+
+.logo-title {
+  font-family: var(--font-heading);
+  font-size: 1.35rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--text-main);
+  line-height: 1.1;
+}
+
+.logo-tagline {
+  font-family: var(--font-body);
+  font-size: 0.54rem;
+  font-weight: 700;
+  letter-spacing: 0.26em;
+  text-transform: uppercase;
+  color: var(--gold);
+}
+
 .mobile-logo-img {
-  height: 40px;
+  height: 36px;
   width: auto;
   object-fit: contain;
 }
