@@ -1194,26 +1194,7 @@ button {
   padding: 1rem 0 2rem 0;
 }
 
-.locations-rail-outer::before,
-.locations-rail-outer::after {
-  content: '';
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 80px;
-  z-index: 5;
-  pointer-events: none;
-}
 
-.locations-rail-outer::before {
-  left: 0;
-  background: linear-gradient(90deg, #0E0F12 0%, transparent 100%);
-}
-
-.locations-rail-outer::after {
-  right: 0;
-  background: linear-gradient(-90deg, #0E0F12 0%, transparent 100%);
-}
 
 .locations-rail {
   display: flex !important;
