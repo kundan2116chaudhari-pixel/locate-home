@@ -2677,35 +2677,64 @@ button {
     letter-spacing: 0.2em;
   }
 
-  /* 2. Hero Section Mobile Fit & Font Sizing */
+  /* 2. Hero Section Mobile Vertical Centering & Balanced Spacing */
   .hero-section {
-    min-height: auto;
-    padding-top: calc(var(--header-height) + 1.25rem);
+    min-height: calc(100vh - var(--header-height));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-top: calc(var(--header-height) + 1.5rem);
     padding-bottom: 3.5rem;
   }
 
+  .hero-container {
+    height: auto;
+    justify-content: center;
+    align-items: center;
+    padding: 0 1.25rem;
+    text-align: center;
+    width: 100%;
+  }
+
   .hero-content {
-    margin-bottom: 1.5rem;
+    max-width: 100%;
+    margin-bottom: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
   }
 
   .hero-headline {
-    font-size: clamp(1.75rem, 7.5vw, 2.5rem);
+    font-size: clamp(2rem, 8vw, 3rem);
     line-height: 1.2;
-    margin-bottom: 1rem;
+    margin-bottom: 1.25rem;
+    text-align: center;
     word-break: break-word;
   }
 
   .hero-subcopy {
-    font-size: 0.92rem;
-    line-height: 1.55;
-    margin-bottom: 1.75rem;
+    font-size: 0.98rem;
+    line-height: 1.6;
+    margin-bottom: 2.25rem;
+    max-width: 92%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+  }
+
+  .hero-cta-wrapper {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .hero-cta-wrapper .btn-primary {
     width: 100%;
+    max-width: 320px;
     justify-content: center;
-    padding: 1rem 1.75rem;
-    font-size: 0.78rem;
+    padding: 1.1rem 2rem;
+    font-size: 0.82rem;
   }
 
   .hero-scroll-indicator {
