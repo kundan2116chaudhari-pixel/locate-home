@@ -598,17 +598,16 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 
   // Attach click listener to video cards and play buttons
-  document.querySelectorAll('[data-action="lightbox"], .video-card-916').forEach(card => {
+  document.querySelectorAll('[data-action="lightbox"], .video-card-169, .video-card-916').forEach(card => {
     card.addEventListener('click', (e) => {
-      // Do not launch lightbox if clicking a direct page link like href="sunteck.html"
       if (e.target.closest('.card-link[href^="sunteck"]')) return;
 
       const videoSourceEl = card.querySelector('video source');
       const videoSrc = card.getAttribute('data-video-src') || (videoSourceEl ? videoSourceEl.src : '');
-      const titleEl = card.querySelector('.card-title');
-      const title = card.getAttribute('data-title') || (titleEl ? titleEl.textContent : 'Property Walkthrough');
-      const tagEl = card.querySelector('.card-location-tag');
-      const tag = card.getAttribute('data-tag') || (tagEl ? tagEl.textContent : 'PROJECT SHOWCASE');
+      const titleEl = card.querySelector('.card-title-169, .card-title');
+      const title = card.getAttribute('data-video-title') || card.getAttribute('data-title') || (titleEl ? titleEl.textContent : 'Property Walkthrough');
+      const tagEl = card.querySelector('.micro-label, .card-location-tag');
+      const tag = card.getAttribute('data-video-tag') || card.getAttribute('data-tag') || (tagEl ? tagEl.textContent : 'PROJECT SHOWCASE');
 
       if (videoSrc) {
         e.preventDefault();
