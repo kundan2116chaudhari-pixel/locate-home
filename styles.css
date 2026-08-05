@@ -1089,39 +1089,24 @@ button {
 }
 
 /* Cream Frame Card */
-.logo-frame-cream {
-  background: #F7F4EE;
-  border: 1px solid rgba(197, 160, 89, 0.4);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
-}
-
-.logo-frame-cream img {
-  height: 52px;
-  max-height: 56px;
-  max-width: 180px;
-  width: auto;
-  object-fit: contain;
-  mix-blend-mode: multiply;
-  filter: contrast(120%);
-  transition: transform var(--transition-fast);
-}
-
-/* Black Frame Card */
+.logo-frame-cream,
 .logo-frame-black {
-  background: #17191F;
-  border: 1px solid rgba(212, 175, 55, 0.4);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  background: #FFFFFF !important;
+  border: 1px solid rgba(213, 129, 42, 0.25) !important;
+  box-shadow: 0 8px 24px rgba(28, 26, 22, 0.05) !important;
+  border-radius: 12px !important;
 }
 
+.logo-frame-cream img,
 .logo-frame-black img {
-  height: 52px;
-  max-height: 56px;
-  max-width: 180px;
-  width: auto;
-  object-fit: contain;
-  mix-blend-mode: screen;
-  filter: brightness(1.6) contrast(120%);
-  transition: transform var(--transition-fast);
+  height: 52px !important;
+  max-height: 56px !important;
+  max-width: 180px !important;
+  width: auto !important;
+  object-fit: contain !important;
+  mix-blend-mode: multiply !important;
+  filter: contrast(110%) !important;
+  transition: transform var(--transition-fast) !important;
 }
 
 .logo-item:hover {
