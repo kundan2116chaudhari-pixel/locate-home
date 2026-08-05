@@ -3268,37 +3268,139 @@ button {
   line-height: 1.65;
 }
 
-/* Areas We Serve Cloud */
+/* Lively Mumbai Skyline Feature Block for Areas We Serve */
 .areas-serve-wrap {
-  margin-top: 4.5rem;
-  padding-top: 3.5rem;
-  border-top: 1px solid var(--border-light);
+  margin-top: 5rem;
+  padding: clamp(2.5rem, 5vw, 4rem);
+  border-radius: 20px;
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--border-gold);
+  box-shadow: 0 20px 60px rgba(184, 150, 62, 0.10);
+  background-color: var(--bg-card);
+}
+
+.areas-bg-skyline {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url('https://images.unsplash.com/photo-1570168007204-dfb528c6958f?auto=format&fit=crop&w=1920&q=80');
+  background-size: cover;
+  background-position: center bottom;
+  opacity: 0.12;
+  filter: contrast(1.1) grayscale(20%);
+  pointer-events: none;
+  transition: transform 10s ease;
+}
+
+.areas-serve-wrap:hover .areas-bg-skyline {
+  transform: scale(1.05);
+}
+
+.areas-content-relative {
+  position: relative;
+  z-index: 2;
+}
+
+.corridor-clusters {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  margin-top: 2.5rem;
+}
+
+.cluster-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.85rem;
+}
+
+.cluster-title {
+  font-family: var(--font-body);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  color: var(--gold);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.cluster-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(184, 150, 62, 0.3), transparent);
 }
 
 .areas-cloud {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.75rem;
-  margin-top: 2rem;
+  gap: 0.85rem;
 }
 
 .area-tag {
-  background: var(--bg-card);
-  border: 1px solid var(--border-mid);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border: 1px solid rgba(184, 150, 62, 0.22);
   color: var(--text-main);
-  font-size: 0.85rem;
+  font-size: 0.9rem;
   font-weight: 600;
-  letter-spacing: 0.04em;
-  padding: 0.6rem 1.25rem;
+  letter-spacing: 0.02em;
+  padding: 0.65rem 1.35rem;
   border-radius: 30px;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03);
   transition: all var(--transition-fast);
+  cursor: pointer;
+}
+
+.area-tag svg {
+  color: var(--gold);
+  transition: transform var(--transition-fast);
 }
 
 .area-tag:hover {
   border-color: var(--gold);
-  background: var(--gold-muted);
+  background: linear-gradient(135deg, var(--gold) 0%, var(--gold-light) 100%);
+  color: #FFFFFF;
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 12px 25px rgba(184, 150, 62, 0.35);
+}
+
+.area-tag:hover svg {
+  color: #FFFFFF;
+  transform: scale(1.2);
+}
+
+.area-badge {
+  font-size: 0.62rem;
+  font-weight: 800;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  background: rgba(184, 150, 62, 0.15);
   color: var(--gold);
-  transform: translateY(-2px);
+  padding: 0.2rem 0.55rem;
+  border-radius: 12px;
+  border: 1px solid rgba(184, 150, 62, 0.3);
+  transition: all var(--transition-fast);
+}
+
+.area-tag:hover .area-badge {
+  background: rgba(255, 255, 255, 0.25);
+  color: #FFFFFF;
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
+.area-tag.featured-hub {
+  border: 1px solid var(--gold);
+  background: rgba(240, 235, 225, 0.95);
 }
 
 /* Motto Banner */
