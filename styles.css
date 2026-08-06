@@ -4079,3 +4079,107 @@ button {
   min-height: 380px;
   display: block;
 }
+
+/* ==========================================================================
+   Sunteck FAQ Section & Accordion Card Styling
+   ========================================================================== */
+.sunteck-faq-section {
+  background: var(--sunteck-bg, #FAF7F2);
+  border-top: 1px solid var(--border-gold, rgba(213, 129, 42, 0.25));
+}
+
+.faq-accordion-wrap {
+  max-width: 920px;
+  margin: 3rem auto 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.faq-card {
+  background: #FFFFFF;
+  border: 1px solid rgba(213, 129, 42, 0.25);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(28, 26, 22, 0.04);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.faq-card[open] {
+  border-color: #D5812A;
+  box-shadow: 0 8px 24px rgba(213, 129, 42, 0.12);
+}
+
+.faq-summary {
+  padding: 1.25rem 1.5rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+}
+
+.faq-summary::-webkit-details-marker {
+  display: none;
+}
+
+.faq-question {
+  font-family: var(--font-heading, 'Playfair Display', serif);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1C1A16;
+  margin: 0;
+  line-height: 1.4;
+  transition: color 0.2s ease;
+}
+
+.faq-card[open] .faq-question {
+  color: #D5812A;
+}
+
+.faq-chevron {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background: rgba(213, 129, 42, 0.1);
+  color: #D5812A;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  position: relative;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.faq-chevron::before {
+  content: '+';
+  font-size: 1.2rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.faq-card[open] .faq-chevron {
+  background: #D5812A;
+  color: #FFFFFF;
+  transform: rotate(180deg);
+}
+
+.faq-card[open] .faq-chevron::before {
+  content: '−';
+}
+
+.faq-answer-body {
+  padding: 0 1.5rem 1.25rem 1.5rem;
+  border-top: 1px solid rgba(213, 129, 42, 0.1);
+  margin-top: 0.25rem;
+  background: #FFFCF7;
+}
+
+.faq-answer {
+  font-size: 0.95rem;
+  line-height: 1.65;
+  color: #4A463D;
+  margin: 0.85rem 0 0 0;
+}
